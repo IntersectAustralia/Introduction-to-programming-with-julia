@@ -28,6 +28,7 @@ Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 10^2
 101%2
 ```
+{: .source}
 
 After which you can show the output, like this:
 ```shell
