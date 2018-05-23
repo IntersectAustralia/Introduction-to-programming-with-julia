@@ -11,4 +11,4 @@ The rendered site is here: [Introduction to Programming with Julia](https://inte
 
 
 
-![Julia image](../images/Julia_prog_language.svg.png)
+![Julia image](./docs/images/Julia_prog_language.svg.png)
