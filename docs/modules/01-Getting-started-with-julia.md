@@ -21,11 +21,11 @@ Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 ## Basic operations
 
 ```shell
-1+1
-2-3
-20*5
-100/10
-10^2
-101%2
+$ 1+1
+$ 2-3
+$ 20*5
+$ 100/10
+$ 10^2
+$ 101%2
 ```
 {: .source}
