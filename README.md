@@ -7,4 +7,4 @@ This is a private repository, with a rendered site made available through github
 ** Note that all files in the /docs subfolder on the master branch are public **
 
 
-The rendered site is here: [Introduction to Programming with Julia](https://intersectaustralia.github.io/surveys-with-qualtrics)
+The rendered site is here: [Introduction to Programming with Julia](https://intersectaustralia.github.io/Introduction-to-programming-with-julia/)
