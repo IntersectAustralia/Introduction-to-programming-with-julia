@@ -28,3 +28,10 @@ Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 10^2
 101%2
 ```
+
+After which you can show the output, like this:
+```shell
+What a wonderful world
+```
+{: .output}
+
