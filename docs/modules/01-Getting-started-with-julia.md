@@ -57,7 +57,3 @@ If one CPU is good, thousands must be better, right?! Unfortunately it's not qui
 - **Lots of data to transfer.** Transferring data takes time, especially over the internet. If you have a huge data set you may find that the time it takes to transfer the data outweighs any time saving you gain by using HPC.
 - **Single threaded tasks.** To harness the power of HPC a task generally has to either be able to be split into smaller tasks that can be run separately (e.g. rerunning the same application with different parameters), or the software used for processing must be written to allow multiple processors to simultaneously solve the problem faster (it must be multi-threaded). Software that is not written this way will not run faster on a High Performance Computer.
 
-TODO: Recap with key-points here?
-
-[Go to the next module]({{ site.baseurl }}/modules/02-nodes-and-schedulers)
-{: .next-link}
