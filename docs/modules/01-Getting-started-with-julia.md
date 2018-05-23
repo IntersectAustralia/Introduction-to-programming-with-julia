@@ -20,7 +20,7 @@ Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 
 ## Basic operations
 
-``` python
+```python
 1+1
 2-3
 20*5
@@ -28,4 +28,3 @@ Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 10^2
 101%2
 ```
-{: .source}
