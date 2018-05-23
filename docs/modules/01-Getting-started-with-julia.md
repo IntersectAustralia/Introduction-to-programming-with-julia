@@ -20,7 +20,7 @@ Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 
 ## Basic operations
 
-``` python
+```shell
 1+1
 2-3
 20*5
