@@ -1,0 +1,15 @@
+# Site settings
+title: Getting started with HPC
+description: "Getting Started with HPC: An introductory course for Researchers"
+contactmessage: "We value your feedback:"   # Call to action message in the footer
+surveyurl: "http://goo.gl/d7bwux"           # The URL of a feedback or interest survey
+email: training@intersect.org.au            # Your email contact address
+licence: "All content on this site is copyright (c) of Intersect Australia Ltd 2018. All rights reserved"      # A statement of the licencing conditions of your site
+baseurl: "/getting-started-with-hpc" # the subpath of your site, e.g. /blog
+url: "https://intersectaustralia.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+remote_theme: "IntersectAustralia/intersect-training-theme"
+markdown: kramdown
+permalink: pretty
+highlighter: rouge
