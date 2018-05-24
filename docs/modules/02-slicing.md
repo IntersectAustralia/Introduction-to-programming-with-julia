@@ -62,30 +62,35 @@ const x = 1
 
 
 
+<details>
+  <summary>stuff with *mark* **down**</summary>
+  <p>
+<!-- the above p cannot start right at the beginning of the line and is mandatory for everything else to work -->
+##*formatted* **heading** with [a](link)
+```java
+code block
+```
 
-# Exercise
-> # Solution
->
-! A) Assign the number 365 to a variable named days. What is the type of this variable?
-!
-! B) Convert days to a floating point number
-{: .inset}
+  <details>
+    <summary><small>nested</small> stuff</summary><p>
+<!-- alternative placement of p shown above -->
 
+* list
+* with
 
+ 1. nested
+ 1. items
 
+    ```java
+    // including code
+    ```
+ 1. blocks
 
-
-
-<details><summary>stuff with *mark* **down**</summary><p>
-
-## _formatted_ **heading** with [a](link)
-
----
-{{standard 3-backtick code block omitted from here due to escaping issues}}
----
-
-Collapsible until here.
+  </p></details>
 </p></details>
+
+
+
 
 [Go to the next module]({{ site.baseurl }}/modules/03-loops)
 {: .next-link}
