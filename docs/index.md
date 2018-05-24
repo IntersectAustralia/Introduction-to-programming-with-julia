@@ -33,5 +33,5 @@ TODO: Move objectives to YML and auto-populate the table below
 
 Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 
-[Go to module 1 to get started]({{ site.baseurl }}/modules/01-Getting-started-with-julia)
+[Go to Setup to get started]({{ site.baseurl }}/modules/00-setup.md)
 {: .next-link}
