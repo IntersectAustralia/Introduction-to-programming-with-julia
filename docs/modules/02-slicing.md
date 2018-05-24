@@ -62,15 +62,7 @@ const x = 1
 
 
 
-$ echo -e "<details><summary>Collapsed Block\n</summary>\n\n## Header\n</details>" | kramdown --parse-block-html
-<details>
-  <summary>
-    <p>Collapsed Block</p>
-  </summary>
-
-  <h2 id="header">Header</h2>
-</details>
-
+<details><summary>Collapsed Block\n</summary>\n\n## Header\n</details>" | kramdown --parse-block-html
 
 
 [Go to the next module]({{ site.baseurl }}/modules/03-loops)
