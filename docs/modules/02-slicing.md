@@ -70,9 +70,10 @@ const x = 1
 
   <h2 id="header">Header</h2>
   
-  ```python
-  const x = 1
-  ```
+  <code>racket
+  (define (sqr x)
+  (* x x))
+  </code>
 </details>
 
 
