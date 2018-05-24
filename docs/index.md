@@ -24,19 +24,13 @@ TODO: Move objectives to YML and auto-populate the table below
 
 |Module number|Name|Learning Objectives|
 |--- |--- |--- |
-|1|Setup|How to setup the Julia environment|
-|2|Getting Started with Julia|How to do basic operations, what is a variable, strings|
+|1|[Setup]({{ site.baseurl }}/modules/00-setup)|How to setup the Julia environment|
+|2|[Getting Started with Julia]({{ site.baseurl }}/modules/01-Getting-started-with-julia)|How to do basic operations, what is a variable, strings|
 |3|Selecting Elements from an Array|
 |4|Repeating Actions with Loops|
 |5|Making Choices with Conditionals|
 |6|Creating Functions|
 |4|Wrapping up|             
-
-
-| Module Number  |   Name               | Learning Objectives                                 |
-|--------------- |----------------------|-----------------------------------------------------|
-|                |   [Setup]({{ site.baseurl }}/modules/00-setup)        | text text          |
-|1               |   [What is HPC?]({{ site.baseurl }}/modules/01-Getting-started-with-julia) | text text |
 
 
 
