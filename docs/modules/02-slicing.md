@@ -62,33 +62,14 @@ const x = 1
 
 
 
+$ echo -e "<details><summary>Collapsed Block\n</summary>\n\n## Header\n</details>" | kramdown --parse-block-html
 <details>
-  <summary>stuff with *mark* **down**</summary>
-  <p>
-<!-- the above p cannot start right at the beginning of the line and is mandatory for everything else to work -->
-##*formatted* **heading** with [a](link)
-```java
-code block
-```
+  <summary>
+    <p>Collapsed Block</p>
+  </summary>
 
-  <details>
-    <summary><small>nested</small> stuff</summary><p>
-<!-- alternative placement of p shown above -->
-
-* list
-* with
-
- 1. nested
- 1. items
-
-    ```java
-    // including code
-    ```
- 1. blocks
-
-  </p></details>
-</p></details>
-
+  <h2 id="header">Header</h2>
+</details>
 
 
 
