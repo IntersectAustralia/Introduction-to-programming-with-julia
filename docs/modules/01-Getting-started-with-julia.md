@@ -18,7 +18,7 @@ Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 # Why Julia?
 Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 
-## Basics
+# Basics
 
 Excecute basic operations
 ```python
@@ -60,7 +60,7 @@ println("I am excited to learn Julia!")
 ```
 {: .source}
 
-## Variables
+# Variables
 Types of variables include:
 * Integer: Number without a decimal point, for example, 152
 * Floating point number: Precise number with decimal point, for example, 15.26 or 105.0
@@ -78,10 +78,14 @@ typeof(my_answer)
 ```
 {: .source}
 
-Please note that if you would like to use comments, you need to use the # symbol in the beginning of the line or use #= comments =# for multiple line comments
+Please note that if you would like to use comments, you need to use the # symbol in the beginning of the line or use #=  *text*  =# for multiple line comments
 {: .note}
 
-
+> # Exercise
+>
+> A) Assign the number 365 to a variable named days. What is the type of this variable?
+> B) Convert days to a floating point number
+{: .inset}
 
 
 
