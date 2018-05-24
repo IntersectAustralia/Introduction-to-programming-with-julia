@@ -69,6 +69,10 @@ const x = 1
   </summary>
 
   <h2 id="header">Header</h2>
+  
+  ```python
+  const x = 1
+  ```
 </details>
 
 
