@@ -54,6 +54,13 @@ const x = 1
 
 
 
+> # Exercise
+>
+>! A) Assign the number 365 to a variable named days. What is the type of this variable?
+>!
+>! B) Convert days to a floating point number
+{: .inset}
+
 [Go to the next module]({{ site.baseurl }}/modules/03-loops)
 {: .next-link}
 
