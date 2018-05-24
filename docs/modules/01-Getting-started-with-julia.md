@@ -293,6 +293,16 @@ KeyError: key 1 not found
 ```
 {: .output}
 
+> # Exercise
+>
+> Try to add "Emergency" as key to the phonebook dictionary with the value 911 using the following code
+>
+> phonebook["Emergency"]=911
+>
+> Why doesn't this work?
+{: .inset}
+
+
 ## Arrays
 Unlike tuples, arrays are mutable. Unlike dictionaries, arrays contain ordered collections. We can create an array by enclosing this collection in [ ].
 
@@ -314,6 +324,91 @@ fibonacci = [1,1,2,3,5,8,13]
 ```
 {: .output}
 
+The elements in an array can be of different types:
+```python
+mix = [1, 2, 3, "Jenny", "John"]
+```
+{: .source}
+```python
+5-element Array{Any,1}:
+ 1       
+ 2       
+ 3       
+  "Jenny"
+  "John"
+```
+{: .output}
+
+To select an element using indexing, you need to use the index inside square brackets
+```python
+mix[3]
+```
+{: .source}
+```python
+3
+```
+{: .output}
+
+We can also update the value of an element
+```python
+mix[3] = "Jack"
+mix
+```
+{: .source}
+```python
+5-element Array{Any,1}:
+ 1       
+ 2       
+  "Jack" 
+  "Jenny"
+  "John" 
+```
+{: .output}
+
+Add another element in the array
+```python
+push!(fibonacci, 21)
+fibonacci
+```
+{: .source}
+```python
+8-element Array{Int64,1}:
+  1
+  1
+  2
+  3
+  5
+  8
+ 13
+ 21
+```
+{: .output}
+
+Also, we can remove an item from an array
+```python
+pop!(fibonacci)
+fibonacci
+```
+{: .source}
+```python
+6-element Array{Int64,1}:
+ 1
+ 1
+ 2
+ 3
+ 5
+ 8
+```
+{: .output}
+
+> # Exercise
+>
+> Create an array called a_ray with the following code:
+>
+> a_ray = [1,2,3]
+>
+> Add the number 4 to the end of this array and then remove it
+{: .inset}
 
 
 
