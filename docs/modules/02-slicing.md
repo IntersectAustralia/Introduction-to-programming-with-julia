@@ -45,7 +45,15 @@ mean.x <- mean(x)
 {: .source}
   </div>
 
-
+Another way:
+<details>
+  <summary>Click to show the Solution</summary>
+  ```{r}
+  x <- sample(100)
+  mean.x <- mean(x)
+  ```
+  {: .source}
+</details>
 
 [Go to the next module]({{ site.baseurl }}/modules/03-loops)
 {: .next-link}
