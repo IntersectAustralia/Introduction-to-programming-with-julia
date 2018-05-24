@@ -23,14 +23,14 @@ Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 TODO: Move objectives to YML and auto-populate the table below
 
 |Module number|Name|Learning Objectives|
-|:---: |--- |--- |
+|:---: |:--- |--- |
 |1|&nbsp;&nbsp;&nbsp;&nbsp;[Setup]({{ site.baseurl }}/modules/00-setup)|&nbsp;&nbsp;&nbsp;&nbsp;How to setup the Julia environment|
-|2|&nbsp;&nbsp;&nbsp;&nbsp;[Getting Started with Julia]({{ site.baseurl }}/modules/01-Getting-started-with-julia)|How to do basic operations, what is a variable, strings|
-|3|&nbsp;&nbsp;&nbsp;&nbsp;Selecting Elements from an Array|
-|4|&nbsp;&nbsp;&nbsp;&nbsp;Repeating Actions with Loops|
-|5|&nbsp;&nbsp;&nbsp;&nbsp;Making Choices with Conditionals|
-|6|&nbsp;&nbsp;&nbsp;&nbsp;Creating Functions|
-|4|&nbsp;&nbsp;&nbsp;&nbsp;Wrapping up|             
+|2|&nbsp;&nbsp;&nbsp;&nbsp;[Getting Started with Julia]({{ site.baseurl }}/modules/01-Getting-started-with-julia)|&nbsp;&nbsp;&nbsp;&nbsp;How to do basic operations, what is a variable, strings|
+|3|&nbsp;&nbsp;&nbsp;&nbsp;Selecting Elements from an Array|&nbsp;&nbsp;&nbsp;&nbsp;Text needed|
+|4|&nbsp;&nbsp;&nbsp;&nbsp;Repeating Actions with Loops|&nbsp;&nbsp;&nbsp;&nbsp;Text needed|
+|5|&nbsp;&nbsp;&nbsp;&nbsp;Making Choices with Conditionals|&nbsp;&nbsp;&nbsp;&nbsp;Text needed|
+|6|&nbsp;&nbsp;&nbsp;&nbsp;Creating Functions|&nbsp;&nbsp;&nbsp;&nbsp;Text needed|
+|4|&nbsp;&nbsp;&nbsp;&nbsp;Wrapping up|&nbsp;&nbsp;&nbsp;&nbsp;Text needed|       
 
 
 
