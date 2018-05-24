@@ -235,8 +235,7 @@ MethodError: no method matching setindex!(::Tuple{String,String,String}, ::Strin
 {: .output}
 
 ## Dictionaries
-If we have sets of data related to one another, we may choose to store that data in a dictionary. 
-We can create a dictionary using the Dict() function, which we can initialize as an empty dictionary or one storing key, value pairs.
+If we have sets of data related to one another, we may choose to store that data in a dictionary. We can create a dictionary using the Dict() function, which we can initialize as an empty dictionary or one storing key, value pairs.
 
 The syntax is: Dict(key1 => value1, key2 => value2, ...)
 ```python
@@ -270,5 +269,47 @@ Dict{String,String} with 3 entries:
   "Jenny"  => "823-231"
   "John"   => "842-475"
   "Isabel" => "736-283"
+```
+{: .output}
+We can also delete entries from our dictionary
+```python
+pop!(phonebook, "John");
+phonebook
+```
+{: .source}
+```python
+Dict{String,String} with 2 entries:
+  "Jenny"  => "823-231"
+  "Isabel" => "736-283"
+```
+{: .output}
+Unlike tuples and arrays, dictionaries are not ordered. So, we can't index into them using numbers (except if the keys are these numbers).
+```python
+phonebook[1]
+```
+{: .source}
+```python
+KeyError: key 1 not found
+```
+{: .output}
+
+## Arrays
+Unlike tuples, arrays are mutable. Unlike dictionaries, arrays contain ordered collections. We can create an array by enclosing this collection in [ ].
+
+The syntax is: [item1, item2, ...]
+
+```python
+fibonacci = [1,1,2,3,5,8,13]
+```
+{: .source}
+```python
+7-element Array{Int64,1}:
+  1
+  1
+  2
+  3
+  5
+  8
+ 13
 ```
 {: .output}
