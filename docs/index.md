@@ -24,13 +24,13 @@ TODO: Move objectives to YML and auto-populate the table below
 
 |Module number|Name|Learning Objectives|
 |:---: |--- |--- |
-|1|[Setup]({{ site.baseurl }}/modules/00-setup)|How to setup the Julia environment|
-|2|[Getting Started with Julia]({{ site.baseurl }}/modules/01-Getting-started-with-julia)|How to do basic operations, what is a variable, strings|
-|3|Selecting Elements from an Array|
-|4|Repeating Actions with Loops|
-|5|Making Choices with Conditionals|
-|6|Creating Functions|
-|4|Wrapping up|             
+|1|&nbsp;&nbsp;&nbsp;&nbsp;[Setup]({{ site.baseurl }}/modules/00-setup)|&nbsp;&nbsp;&nbsp;&nbsp;How to setup the Julia environment|
+|2|&nbsp;&nbsp;&nbsp;&nbsp;[Getting Started with Julia]({{ site.baseurl }}/modules/01-Getting-started-with-julia)|How to do basic operations, what is a variable, strings|
+|3|&nbsp;&nbsp;&nbsp;&nbsp;Selecting Elements from an Array|
+|4|&nbsp;&nbsp;&nbsp;&nbsp;Repeating Actions with Loops|
+|5|&nbsp;&nbsp;&nbsp;&nbsp;Making Choices with Conditionals|
+|6|&nbsp;&nbsp;&nbsp;&nbsp;Creating Functions|
+|4|&nbsp;&nbsp;&nbsp;&nbsp;Wrapping up|             
 
 
 
