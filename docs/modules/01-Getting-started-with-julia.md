@@ -77,6 +77,10 @@ Check the type of a variable
 typeof(my_answer)
 ```
 {: .source}
+```python
+Int64
+```
+{: .output}
 
 Please note that if you would like to use comments, you need to use the # symbol in the beginning of the line or use #=  *text*  =# for multiple line comments
 {: .note}
@@ -87,6 +91,59 @@ Please note that if you would like to use comments, you need to use the # symbol
 >
 > B) Convert days to a floating point number
 {: .inset}
+
+# Strings
+As we mentioned before, you need to use quotes "*string*" or triple quotes """*string*""" to define a string. 
+One difference between the single vs triple quotes is that, in the latter case, you can use quotation marks within your string.
+
+Be careful! You cannot use single quotation marks (') for strings in Julia.
+{: .note}
+
+This is an example of a string:
+```python
+"This is my first string."
+```
+{: .source}
+```python
+"This is my first string."
+```
+{: .output}
+or
+```python
+"""This is a string with "special" characters, such as !-@"""
+```
+{: .source}
+```python
+"This is a string with "special" characters, such as !-@"
+```
+{: .output}
+
+This is a wrong syntax for a string in Julia
+```python
+'This is a wrong string'
+```
+{: .source}
+```python
+syntax: Invalid character literal
+```
+{: .output}
+
+## Print strings and other types of variables
+
+```python
+name = "John"
+age = 25
+
+println("Hello $name")
+println("You are $age years old")
+```
+{: .source}
+or
+```python
+println("Hello $name. You are $age years old")
+```
+{: .source}
+
 
 
 
