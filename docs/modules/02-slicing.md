@@ -37,22 +37,15 @@ Question is ......
 
   <a id="displayText" href="javascript:toggle(1);">Show Solution code</a>
   <div id="toggleText1" style="display: none">
-
-```{r}
-x <- sample(100)
-mean.x <- mean(x)
-```
-{: .source}
+x <- sample(100) <br />
+mean.x <- mean(x) <br />
   </div>
 
 Another way:
 <details>
   <summary>Click to show the Solution</summary>
-  ```{r}
-  x <- sample(100)
-  mean.x <- mean(x)
-  ```
-  {: .source}
+  x <- sample(100) <br />
+  mean.x <- mean(x) <br />
 </details>
 
 [Go to the next module]({{ site.baseurl }}/modules/03-loops)
