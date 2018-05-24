@@ -18,8 +18,9 @@ Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 # Why Julia?
 Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 
-## Basic operations
+## Basics
 
+Excecute basic operations
 ```python
 1+1
 2-3
@@ -29,6 +30,39 @@ Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 101%2
 ```
 {: .source}
+
+Suppress the output using the semicolon
+```python
+2+2;
+```
+{: .source}
+
+You can find some help information for the functions using the question mark
+```python
+?println
+```
+{: .source}
+
+In Julia, you are able to use Unix Shell commands by using the ; in front of the command
+```python
+;pwd
+```
+{: .source}
+or
+```python
+;ls
+```
+{: .source}
+
+To print something in Julia, we use println:
+```python
+println("I am excited to learn Julia!")
+```
+{: .source}
+
+
+
+
 
 After which you can show the output, like this:
 ```shell
