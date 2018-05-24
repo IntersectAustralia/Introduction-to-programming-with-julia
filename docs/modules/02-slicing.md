@@ -42,21 +42,17 @@ mean.x <- mean(x) <br />
   </div>
 
 Another way:
-<details><summary>stuff with *mark* **down**</summary><p>
 
-## _formatted_ **heading** with [a](link)
+
+<details>
+ <summary>Solution</summary>
+
 ```python
-x=5
-y=6
-z=y+x
+const x = 1
 ```
-{: .source}
----
-{{standard 3-backtick code block omitted from here due to escaping issues}}
----
+</details>
 
-Collapsible until here.
-</p></details>
+
 
 [Go to the next module]({{ site.baseurl }}/modules/03-loops)
 {: .next-link}
