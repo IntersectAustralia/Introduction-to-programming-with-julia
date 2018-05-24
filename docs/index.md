@@ -23,7 +23,7 @@ Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 TODO: Move objectives to YML and auto-populate the table below
 
 |Module number|Name|Learning Objectives|
-|--- |--- |--- |
+|:---: |--- |--- |
 |1|[Setup]({{ site.baseurl }}/modules/00-setup)|How to setup the Julia environment|
 |2|[Getting Started with Julia]({{ site.baseurl }}/modules/01-Getting-started-with-julia)|How to do basic operations, what is a variable, strings|
 |3|Selecting Elements from an Array|
