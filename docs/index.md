@@ -20,7 +20,7 @@ Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 
 # Outline
 
-TODO: Move objectives to YML and auto-populate the table below
+TODO: Move objectives to YML and auto-populate the table below..
 
 |Module number|&nbsp;&nbsp;&nbsp;&nbsp;Name|&nbsp;&nbsp;&nbsp;&nbsp;Learning Objectives|
 |:---: |:--- |:--- |
