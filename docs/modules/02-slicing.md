@@ -32,6 +32,7 @@ Text Text Text Text Text
 Text Text Text Text Text 
 Text Text Text Text Text 
 
+
 # Exercise
 Question is ......
 
@@ -41,7 +42,13 @@ x <- sample(100) <br />
 mean.x <- mean(x) <br />
   </div>
 
+
+
+
 Another way:
+
+
+
 
 
 <details>
@@ -53,6 +60,9 @@ const x = 1
 </details>
 
 
+
+
+
 # Exercise
 > # Solution
 >
@@ -60,6 +70,22 @@ const x = 1
 !
 ! B) Convert days to a floating point number
 {: .inset}
+
+
+
+
+
+
+<details><summary>stuff with *mark* **down**</summary><p>
+
+## _formatted_ **heading** with [a](link)
+
+---
+{{standard 3-backtick code block omitted from here due to escaping issues}}
+---
+
+Collapsible until here.
+</p></details>
 
 [Go to the next module]({{ site.baseurl }}/modules/03-loops)
 {: .next-link}
