@@ -22,10 +22,10 @@ Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 
 TODO: Move objectives to YML and auto-populate the table below
 
-| Module Number |   Name        | Learning Objectives        |
-|---------------|---------------|----------------------------|
-|                 |   [Setup]({{ site.baseurl }}/modules/00-setup)| text text |
-|1                |   [What is HPC?]({{ site.baseurl }}/modules/01-Getting-started-with-julia) | text text |
+| Module Number  |   Name               | Learning Objectives                                 |
+|--------------- |----------------------|-----------------------------------------------------|
+|                |   [Setup]({{ site.baseurl }}/modules/00-setup)        | text text          |
+|1               |   [What is HPC?]({{ site.baseurl }}/modules/01-Getting-started-with-julia) | text text |
 
 
 
