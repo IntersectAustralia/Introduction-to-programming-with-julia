@@ -138,21 +138,63 @@ println("Hello $name")
 println("You are $age years old")
 ```
 {: .source}
+which gives the following output:
+```python
+Hello John
+You are 25 years old
+```
+{: .output}
+
 or
 ```python
 println("Hello $name. You are $age years old")
 ```
 {: .source}
-
-
-
-
-
-
-
-After which you can show the output, like this:
-```shell
-What a wonderful world
+```python
+Hello John. You are 25 years old
 ```
 {: .output}
+
+You can also do calculations within the println before you print the output. Note that the calculation should be within parenthesis after the $ symbol:
+```python
+println("You are $(2*age+10) years old")
+```
+{: .source}
+```python
+You are 60 years old
+```
+{: .output}
+
+You can also concatenate strings:
+```python
+s1 = "String 1";
+s2 = "String 2";
+
+string(s1," ",s2, " Another string")
+```
+{: .source}
+```python
+"String 1 String 2 Another string"
+```
+{: .output}
+or another way to concatenate two strings:
+```python
+s1*s2
+```
+{: .source}
+```python
+"String 1String 2"
+```
+{: .output}
+
+> # Exercise
+>
+> Declare two variables, a=3 and b=4, and use them to create two strings
+>
+> A) "3 + 4"
+>
+> B) "7"
+{: .inset}
+
+# Data Structures
 
