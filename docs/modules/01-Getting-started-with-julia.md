@@ -197,4 +197,78 @@ s1*s2
 {: .inset}
 
 # Data Structures
+Once we start working with many pieces of data at once, it will be convenient for us to store data in structures like arrays or dictionaries (rather than just relying on variables).
 
+Types of data structures covered:
+* Tuples
+* Dictionaries
+* Arrays
+
+## Tuples
+We can create a tuple by enclosing an ordered collection of elements in ( ).
+```python
+animals = ("dogs", "cats", "penguins")
+```
+{: .source}
+```python
+("dogs", "cats", "penguins")
+```
+{: .output}
+
+Index into the tuple
+```python
+animals[1]
+```
+{: .source}
+```python
+"dogs"
+```
+{: .output}
+But tupples are immutable, so we can't update it
+```python
+animals[1] = "lions"
+```
+{: .source}
+```python
+MethodError: no method matching setindex!(::Tuple{String,String,String}, ::String, ::Int64)
+```
+{: .output}
+
+## Dictionaries
+If we have sets of data related to one another, we may choose to store that data in a dictionary. 
+We can create a dictionary using the Dict() function, which we can initialize as an empty dictionary or one storing key, value pairs.
+
+The syntax is: Dict(key1 => value1, key2 => value2, ...)
+```python
+phonebook = Dict("Jenny" => "823-231", "John" => "842-475")
+```
+{: .source}
+```python
+Dict{String,String} with 2 entries:
+  "Jenny" => "823-231"
+  "John"  => "842-475"
+```
+{: .output}
+In this example, each name and number is a "key" and "value" pair. 
+We can grab Jenny's number (a value) using the associated key:
+```python
+phonebook["Jenny"]
+```
+{: .source}
+```python
+"823-231"
+```
+{: .output}
+We can add another entry to this dictionary
+```python
+phonebook["Isabel"] = "736-283";
+phonebook
+```
+{: .source}
+```python
+Dict{String,String} with 3 entries:
+  "Jenny"  => "823-231"
+  "John"   => "842-475"
+  "Isabel" => "736-283"
+```
+{: .output}
