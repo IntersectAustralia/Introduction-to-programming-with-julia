@@ -295,9 +295,22 @@ C = [i+j for i in 1:m, j in 1:n]
 
 > # Exercise
 >
-> Using the range function (if you don't know how to use it, run the help on the range function), write a loop that uses range to print the first 5 natural numbers:
+> Using the range function (if you don't know how to use it, run the help on the range function), write a loop that uses range to print the first 5 natural numbers.
 {: .inset}
 
+> # Exercise
+>
+> Exponentiation is built into Julia:
+>
+> 5^3
+>
+> Write a loop that calculates the same result (5^3)
+{: .inset}
+
+> # Exercise
+>
+> Use an array comprehension to create an create an array that stores the squares for all integers between 1 and 10
+{: .inset}
 
 [Go to the next module]({{ site.baseurl }}/modules/04-conditionals)
 {: .next-link}
