@@ -63,10 +63,76 @@ before conditional...
 ```
 {: .output}
 
+You can add additional conditions using the elseif part (you can add as many you want)
+```matlab
+number = -3
+
+if number > 0
+    println(number, " is positive")
+elseif num == 0
+    println(number, " is zero")
+else
+    println(number, " is negative")
+end
+```
+{: .source}
+```matlab
+-3 is negative
+```
+{: .output}
+
+You can also combine conditions using the and (&) symbol, if you would like both conditions to be true
+```matlab
+number = 53
+
+if (number > 0) & (number < 100)
+    println("both parts are true")
+else
+    println("at least one part is false")
+end
+```
+{: .source}
+```matlab
+both parts are true
+```
+{: .output}
+
+or you can combine conditions with the or (|) symbol (Shift+\ buttons in the keyboard), if you would like one or the other condition to be true
+```matlab
+number = 53
+
+if (number < 0) | (number > 100)
+    println("both parts are true")
+else
+    println("at least one part is false")
+end
+```
+{: .source}
+```matlab
+at least one part is false
+```
+{: .output}
+
+> # Exercise
+> 
+> You have the following code
+>
+> if 4>5
+>   println("A")
+> elseif 4 == 5
+>   println("B")
+> elseif 4<5
+>   println("C")
+>
+> Which of the following would be printed if you were to run this code? Why did you pick this answer?
+>
+> 1. A
+> 2. B
+> 3. C
+> 4. B and C
+{: .inset}
 
 
 
 [Go to the next module]({{ site.baseurl }}/modules/05-functions)
 {: .next-link}
-
-
