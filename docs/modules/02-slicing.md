@@ -50,19 +50,6 @@ Another way:
 
 
 
-
-<details>
- <summary>Solution</summary>
-
-```python
-const x = 1
-```
-</details>
-
-
-
-
-
 <details>
   <summary>
     <p>Collapsed Block</p>
