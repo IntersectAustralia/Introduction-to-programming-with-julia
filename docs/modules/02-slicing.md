@@ -64,6 +64,7 @@ Another way:
 </details>
 
 
-[Go to the previous module]({{ site.baseurl }}/modules/01-Getting-started-with-julia/)   [Go to the next module]({{ site.baseurl }}/modules/03-loops)
-{: .next-link}
+|[Go to the previous module]({{ site.baseurl }}/modules/01-Getting-started-with-julia/)|[Go to the next module]({{ site.baseurl }}/modules/03-loops)
+{: .next-link}|
+|:---|---:|
 
