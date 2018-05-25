@@ -227,5 +227,4 @@ true
 {: .inset}
 
 
-[Go to the next module]({{ site.baseurl }}/modules/05-functions)
-{: .next-link}
+[Go to Module 5 (Functions)]({{ site.baseurl }}/modules/05-functions){: .next-link}
