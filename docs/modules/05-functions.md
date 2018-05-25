@@ -79,9 +79,112 @@ function celcius_to_kelvin(temperature_c)
 end
 ```
 {: .source}
+And let's test it to convert 0 Celsius to Kelvin.
+```matlab
+celcius_to_kelvin(0)
+```
+{: .source}
+```matlab
+273.15
+```
+{: .output}
 
+# Chain functions
+So now, if we would like to create a function to convert Fahrenheit to Kelvin, we could do it using the two functions that we previously created
+```matlab
+function fahr_to_kelvin(temperature_f)
+    temperature_c = fahr_to_celsius(temperature_f)
+    temperature_k = celcius_to_kelvin(temperature_c)
+end
+```
+{: .source}
+Let's test it for 212 Fahrenheit
+```matlab
+fahr_to_kelvin(212)
+```
+{: .source}
+```matlab
+373.15
+```
+{: .output}
 
+However, there is another way to do that. We could have chained the two function in order to get the same result without creating another function
+```matlab
+celcius_to_kelvin(fahr_to_celsius(212))
+```
+{: .source}
+```matlab
+373.15
+```
+{: .output}
 
+# Return values
+By default, the function will return the value of the last variable that was defined within the function. For example, the fahr_to_kelvin function will return the value of the temperature_k variable, which is the last command within the function. If we would like to return more than one values, we need to add a command called return before we end the syntax of the function. 
+```matlab
+function fahr_to_kelvin(temperature_f)
+    temperature_c = fahr_to_celsius(temperature_f)
+    temperature_k = celcius_to_kelvin(temperature_c)
+    return temperature_c, temperature_k
+end
+
+a, b = fahr_to_kelvin(10)
+```
+{: .source}
+```matlab
+(-12.222222222222223, 260.92777777777775)
+```
+{: .output}
+
+Another way to do the multiple return values in Julia is
+```matlab
+function new_function(a,b)
+    a+b, a-b
+end
+
+x, y = new_function(1,3)
+```
+{: .source}
+```matlab
+(4, -2)
+```
+{: .source}
+
+# Default values
+Although most of the functions have many arguments, you usually call them using only a few of them. This means that the other arguments of the function have default values. To define arguments with default values in the function, you have to use the assign (=) symbol when you define them.
+```matlab
+function myprint(a,b=1,c=10)
+    println("a:",a," b:",b," c:",c)
+end
+
+myprint(1)
+```
+{: .source}
+In this example, the arguments b and c of the function have a default value of 1 and 10, respectively. This way, when we call the function without the b and c arguments, the function will still run and the arguments b and c will take their default values.
+```matlab
+a:1 b:1 c:10
+```
+{: .output}
+
+If I would like to overwrite the default values then
+```matlab
+myprint(1,5)
+```
+{: .source}
+```matlab
+a:1 b:5 c:10
+```
+{: .output}
+
+?????????????????Be careful! The order you define the arguments when you call the function is important. In the example of myprint(1,5), 1 will be assigned to the argument a, 5 will replace the default value of argument b, and since we haven't defined a value for the argument c, it will have its default value, i.e. 10. However, if, when you call the function, you define the name of the argument, then the order is not important. For example, the order is important in this case, if we would like to define a=1 and b=5
+```matlab
+myprint(1,5)
+```
+{: .source}
+however the order is not important in the following example
+```matlab
+myprint(b=5,a=1)
+```
+{: .source}
 
 
 # Mutating vs non-mutating functions
