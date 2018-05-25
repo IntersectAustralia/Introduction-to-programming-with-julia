@@ -15,13 +15,13 @@ show-in-nav-bar: true
 Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 
 Let's create a variable called word
-```r
+```matlab
 word = "lead"
 ```
 {: .source}
 
 If we would like to print each letter of the variable word, we should do:
-```r
+```matlab
 println(word[1])
 println(word[2])
 println(word[3])
@@ -33,7 +33,7 @@ However, this is a not a good practise because:
 1. text text
 2. text text 
 
-```r
+```matlab
 word = "tin";
 println(word[1])
 println(word[2])
@@ -42,7 +42,7 @@ println(word[4])
 ```
 {: .source}
 
-```r
+```matlab
 t
 i
 n
@@ -52,7 +52,7 @@ BoundsError: attempt to access "tin"
 {: .output}
 
 Here is a better example of how to do repetitive actions in programming using loops
-```r
+```matlab
 word = "lead";
 for char in word
     println(char)
@@ -60,7 +60,7 @@ end
 ```
 {: .source}
 
-```r
+```matlab
 l
 e
 a
@@ -69,7 +69,7 @@ d
 {: .output}
 
 Now, if we change the variable word, we will have an error message
-```javascript
+```matlab
 word = "oxygen";
 for char in word
     println(char)
@@ -77,7 +77,7 @@ end
 ```
 {: .source}
 
-```r
+```matlab
 o
 x
 y
@@ -96,14 +96,14 @@ end
 {: .source}
 
 The name of the variable in the loop can be whatever, however, note that it is always useful to give meaningful names to the variables
-```cpp
+```matlab
 word = "oxygen";
 for banana in word
     println(banana)
 end
 ```
 {: .source}
-```r
+```matlab
 o
 x
 y
@@ -114,7 +114,7 @@ n
 {: .output}
 
 Let's try now to calculate the number of elements in a list, or if you prefer, how many times the loop will run
-```bash
+```matlab
 len = 0;
 for vowel in "aeiou"
     len = len + 1
@@ -123,7 +123,7 @@ end
 println("There are $len vowels in the collection")
 ```
 {: .source}
-```r
+```
 There are 5 vowels in the collection
 ```
 {: .output}
