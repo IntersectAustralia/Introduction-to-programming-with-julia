@@ -65,4 +65,5 @@ Another way:
 
 ## Next
 In the next module we're going ........................
+
 [Go to Module 3 (Loops)]({{ site.baseurl }}/modules/03-loops){: .next-link}
