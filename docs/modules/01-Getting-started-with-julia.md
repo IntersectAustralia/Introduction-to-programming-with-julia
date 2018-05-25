@@ -412,5 +412,4 @@ fibonacci
 
 
 
-[Go to the next module]({{ site.baseurl }}/modules/02-slicing)
-{: .next-link}
+[Go to Module 2 (Loops)]({{ site.baseurl }}/modules/02-slicing){: .next-link}
