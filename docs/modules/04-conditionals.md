@@ -118,10 +118,15 @@ at least one part is false
 > You have the following code
 >
 > if 4>5
+>
 >   println("A")
+>
 > elseif 4 == 5
+>
 >   println("B")
+>
 > elseif 4<5
+>
 >   println("C")
 >
 > Which of the following would be printed if you were to run this code? Why did you pick this answer?
@@ -131,6 +136,9 @@ at least one part is false
 > 3. C
 > 4. B and C
 {: .inset}
+
+# Additional things with Julia Conditionals
+
 
 
 
