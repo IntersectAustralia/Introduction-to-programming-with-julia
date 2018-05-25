@@ -95,6 +95,15 @@ end
 ```
 {: .source}
 
+The name of the variable in the loop can be whatever, however, note that it is always useful to give meaningful names to the variables
+```r
+word = "oxygen";
+for banana in word
+    println(banana)
+end
+```
+{: .source}
+
 
 [Go to the next module]({{ site.baseurl }}/modules/04-conditionals)
 {: .next-link}
