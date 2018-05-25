@@ -96,16 +96,37 @@ end
 {: .source}
 
 The name of the variable in the loop can be whatever, however, note that it is always useful to give meaningful names to the variables
-```c
+```cpp
 word = "oxygen";
 for banana in word
     println(banana)
 end
 ```
 {: .source}
+```r
+o
+x
+y
+g
+e
+n
+```
+{: .output}
 
 Let's try now to calculate the number of elements in a list, or if you prefer, how many times the loop will run
+```bash
+len = 0;
+for vowel in "aeiou"
+    len = len + 1
+end
 
+println("There are $len vowels in the collection")
+```
+{: .source}
+```r
+There are 5 vowels in the collection
+```
+{: .output}
 
 
 [Go to the next module]({{ site.baseurl }}/modules/04-conditionals)
