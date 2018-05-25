@@ -117,17 +117,16 @@ at least one part is false
 > 
 > You have the following code
 >
+> ```matlab
 > if 4>5
->
 >   println("A")
->
 > elseif 4 == 5
->
 >   println("B")
->
 > elseif 4<5
->
 >   println("C")
+> end
+> ```
+>{: .source}
 >
 > Which of the following would be printed if you were to run this code? Why did you pick this answer?
 >
