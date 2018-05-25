@@ -361,6 +361,7 @@ A .+ 2 .* f.(A) ./ A
 ```
 {: .output}
 
-
+## Next
+In the next module we're going ........................
 [Go to Module 6 (Wrapping up)]({{ site.baseurl }}/modules/06-wrapping-up)
 {: .next-link}
