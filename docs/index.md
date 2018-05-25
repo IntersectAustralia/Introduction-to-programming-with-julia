@@ -1,3 +1,4 @@
+<link rel="icon"  type="image/png"    href="https://www.intersect.org.au/docs/logo_intersect.gif">
 ---
 layout: page
 title: Introduction to Programming with Julia
