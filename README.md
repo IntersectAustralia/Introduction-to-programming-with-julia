@@ -1,4 +1,4 @@
-# Introduction-to-programming-with-julia
+# Introduction to Programming with Julia
 
 This repository contains materials for "Introduction to Programming with Julia"  - a workshop for researchers
 
