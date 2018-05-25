@@ -362,5 +362,5 @@ A .+ 2 .* f.(A) ./ A
 {: .output}
 
 
-[Go to the next module]({{ site.baseurl }}/modules/06-wrapping-up)
+[Go to Module 6 (Wrapping up)]({{ site.baseurl }}/modules/06-wrapping-up)
 {: .next-link}
