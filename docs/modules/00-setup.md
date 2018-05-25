@@ -11,6 +11,5 @@ show-in-nav-bar: true
 Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 
 
-[Go to the next module]({{ site.baseurl }}/modules/01-Getting-started-with-julia)
-{: .next-link}
+[Go to Module 1 (Getting Started with Julia)]({{ site.baseurl }}/modules/01-Getting-started-with-julia){: .next-link}
 
