@@ -7,13 +7,7 @@ This is a private repository, with a rendered site made available through github
 ** Note that all files in the /docs subfolder on the master branch are public **
 
 The rendered site is here: [Introduction to Programming with Julia](https://intersectaustralia.github.io/Introduction-to-programming-with-julia/)
-
-
-# Introduction
-
-Welcome to Intersect's Introduction to Programming with Julia course for researchers.
-
-Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
+ 
 
 # Prerequisites
 
@@ -21,6 +15,7 @@ This course assumes Text Text Text Text Text Text Text Text Text Text Text Text 
 
 Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 {: .note}
+
 
 # Outline
 
@@ -35,7 +30,6 @@ TODO: Move objectives to YML and auto-populate the table below..
 |4|&nbsp;&nbsp;&nbsp;&nbsp;[Making Choices with Conditionals]({{ site.baseurl }}/modules/04-conditionals)|&nbsp;&nbsp;&nbsp;&nbsp;Text needed|
 |5|&nbsp;&nbsp;&nbsp;&nbsp;[Creating Functions]({{ site.baseurl }}/modules/05-functions)|&nbsp;&nbsp;&nbsp;&nbsp;Text needed|
 |6|&nbsp;&nbsp;&nbsp;&nbsp;[Wrapping up]({{ site.baseurl }}/modules/06-wrapping-up)|&nbsp;&nbsp;&nbsp;&nbsp;Text needed|       
-
 
 
 # Attribution
