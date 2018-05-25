@@ -10,6 +10,7 @@ show-in-nav-bar: true
 
 Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 
-
+## Next
+In the first module we're going ........................
 [Go to Module 1 (Getting Started with Julia)]({{ site.baseurl }}/modules/01-Getting-started-with-julia){: .next-link}
 
