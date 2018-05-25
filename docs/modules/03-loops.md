@@ -238,8 +238,8 @@ Hi Marshall. How are you?
 ```
 {: .output}
 
-# Nested loops and prefilled lists/arrays/matrices
-It is useful to know that a common technique when you would like to calculate or update the values of a list, it is better to create the list/array/matric and fill it with zeros and then update the values of the elements instead of changing the size of the list/array/matrix in every iteration of the loop.
+# Nested loops and prefilled arrays
+It is useful to know that a common technique when you would like to calculate or update the values of a list, it is better to create the array and fill it with zeros and then update the values of the elements instead of changing the size of the array in every iteration of the loop.
 ```matlab
 m,n = 3,3
 A = fill(0, (m,n))
