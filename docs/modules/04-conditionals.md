@@ -227,5 +227,6 @@ true
 {: .inset}
 
 
-[Go to the next module]({{ site.baseurl }}/modules/05-functions)
+[Go to the previous module]({{ site.baseurl }}/modules/03-loops)
+{: .next-link}      [Go to the next module]({{ site.baseurl }}/modules/05-functions)
 {: .next-link}
