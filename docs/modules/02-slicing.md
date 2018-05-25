@@ -64,5 +64,4 @@ Another way:
 </details>
 
 
-[Go to the next module]({{ site.baseurl }}/modules/03-loops)
-{: .next-link}
+[Go to Module 3 (Loops)]({{ site.baseurl }}/modules/03-loops){: .next-link}
