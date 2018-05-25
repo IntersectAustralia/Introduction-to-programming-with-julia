@@ -1,11 +1,11 @@
-<link rel="icon"  type="image/png"    href="https://www.intersect.org.au/docs/logo_intersect.gif">
-
 ---
 layout: page
 title: Introduction to Programming with Julia
 short-title: "Home" # This will appear in the Nav bar in the header
 show-in-nav-bar: true
 ---
+
+<link rel="icon"  type="image/png"    href="https://www.intersect.org.au/docs/logo_intersect.gif">
 
 # Introduction
 
