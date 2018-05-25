@@ -411,5 +411,6 @@ fibonacci
 {: .inset}
 
 
-
+## Next
+In the next module we're going ........................
 [Go to Module 2 (Slicing)]({{ site.baseurl }}/modules/02-slicing){: .next-link}
