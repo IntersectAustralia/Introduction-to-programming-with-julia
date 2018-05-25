@@ -52,7 +52,7 @@ Another way:
 
 <details>
   <summary>
-    <p>Collapsed Block</p>
+    Collapsed Block
   </summary>
 
   <h2 id="header">Header</h2>
