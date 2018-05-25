@@ -138,8 +138,94 @@ at least one part is false
 {: .inset}
 
 # Additional things with Julia Conditionals
+In Julia, we can write conditionals in a more compact way, such as
+```matlab
+a?b:c
+```
+{: .source}
+which equates to
+```matlab
+if a
+    b
+else
+    c
+end
+```
+{: .source}
+
+For example, we have the following conditional
+```matlab
+x=3
+y=5
+
+if x>y
+    println(x)
+else
+    println(y)
+end
+```
+{: .source}
+which gives an output
+```matlab
+5
+```
+{: .output}
+
+We could write the previous conditional using Julia's compact way
+```matlab
+(x>y) ? println(x) : println(y)
+```
+{: .source}
+which gives the exact same output
+```matlab
+5
+```
+{: .output}
+
+In this compact format, if we replace & with &&, as in a && b, we get short-circuit evaluation, i.e. b is only evaluated if a is true, which can help us out if evaluating b is expensive (time consuming). For example
+```matlab
+(x > y) && println(x)
+```
+{: .source}
+```matlab
+false
+```
+{: .output}
 
 
+```matlab
+(x < y) && println(y)
+```
+{: .source}
+```matlab
+5
+```
+{: .output}
+
+Similarly with the OR operator | and ||
+```matlab
+true | (println("hi"); true)
+```
+{: .source}
+```matlab
+hi
+true
+```
+{: .output}
+However, if we use the double OR operator
+```matlab
+true || (println("hi"); true)
+```
+{: .source}
+```matlab
+true
+```
+{: .output}
+
+> # Exercise
+>
+> text text text
+{: .inset}
 
 
 [Go to the next module]({{ site.baseurl }}/modules/05-functions)
