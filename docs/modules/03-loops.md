@@ -15,13 +15,13 @@ show-in-nav-bar: true
 Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 
 Let's create a variable called word
-```python
+```r
 word = "lead"
 ```
 {: .source}
 
 If we would like to print each letter of the variable word, we should do:
-```python
+```r
 println(word[1])
 println(word[2])
 println(word[3])
@@ -33,7 +33,7 @@ However, this is a not a good practise because:
 1. text text
 2. text text 
 
-```python
+```r
 word = "tin";
 println(word[1])
 println(word[2])
@@ -42,7 +42,7 @@ println(word[4])
 ```
 {: .source}
 
-```python
+```r
 t
 i
 n
@@ -52,7 +52,7 @@ BoundsError: attempt to access "tin"
 {: .output}
 
 Here is a better example of how to do repetitive actions in programming using loops
-```python
+```r
 word = "lead";
 for char in word
     println(char)
@@ -60,7 +60,7 @@ end
 ```
 {: .source}
 
-```python
+```r
 l
 e
 a
@@ -69,7 +69,7 @@ d
 {: .output}
 
 Now, if we change the variable word, we will have an error message
-```python
+```r
 word = "oxygen";
 for char in word
     println(char)
@@ -77,7 +77,7 @@ end
 ```
 {: .source}
 
-```python
+```r
 o
 x
 y
@@ -86,6 +86,14 @@ e
 n
 ```
 {: .output}
+
+The generic syntax of a **for** loop
+```r
+for variable in collection
+    do things
+end
+```
+{: .source}
 
 
 [Go to the next module]({{ site.baseurl }}/modules/04-conditionals)
