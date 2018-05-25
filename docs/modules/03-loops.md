@@ -69,7 +69,7 @@ d
 {: .output}
 
 Now, if we change the variable word, we will have an error message
-```r
+```javascript
 word = "oxygen";
 for char in word
     println(char)
@@ -88,7 +88,7 @@ n
 {: .output}
 
 The generic syntax of a **for** loop
-```r
+```matlab
 for variable in collection
     do things
 end
@@ -96,13 +96,16 @@ end
 {: .source}
 
 The name of the variable in the loop can be whatever, however, note that it is always useful to give meaningful names to the variables
-```r
+```c
 word = "oxygen";
 for banana in word
     println(banana)
 end
 ```
 {: .source}
+
+Let's try now to calculate the number of elements in a list, or if you prefer, how many times the loop will run
+
 
 
 [Go to the next module]({{ site.baseurl }}/modules/04-conditionals)
