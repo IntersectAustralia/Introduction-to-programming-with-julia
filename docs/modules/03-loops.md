@@ -312,4 +312,6 @@ C = [i+j for i in 1:m, j in 1:n]
 > Use an array comprehension to create an create an array that stores the squares for all integers between 1 and 10
 {: .inset}
 
+## Next
+In the next module we're going ........................
 [Go to Module 4 (Conditionals)]({{ site.baseurl }}/modules/04-conditionals){: .next-link}
