@@ -226,6 +226,52 @@ true
 > text text text
 {: .inset}
 
+# Inflammation datasets and conditionals
+Let's say that we know that there are some rules to understand if there is a problem in our inflammation dataset, and these rules are:
+1. If the maximum inflammation at Day 1 is 0 and at Day 21 is 20
+2. If the minimum inflammation per Day is 0 throughout all the days
+
+To check if each of the inflammation datasets has any of these two problems, we can use conditionals. Let's start building our conditional step by step. Let's start with the first rule about the maximum
+```matlab
+data = readdlm("./data/inflammation-01.csv", ',');
+
+if (maximum(data,1)'[1]==0) & (maximum(data,1)'[21]==20)
+    println("Problem detected: Suspicious looking maximum!")
+end
+```
+{: .source}
+Now let's add the second rule using the elseif command
+```matlab
+data = readdlm("./data/inflammation-01.csv", ',');
+
+if (maximum(data,1)'[1]==0) & (maximum(data,1)'[21]==20)
+    println("Problem detected: Suspicious looking maximum!")
+elseif sum(minimum(data,1)')==0
+    println("Problem detected: Minimum add up to zero!")
+end
+```
+{: .source}
+and at the end let's add a statement if the dataset is ok. 
+```matlab
+data = readdlm("./data/inflammation-01.csv", ',');
+
+if (maximum(data,1)'[1]==0) & (maximum(data,1)'[21]==20)
+    println("Problem detected: Suspicious looking maximum!")
+elseif sum(minimum(data,1)')==0
+    println("Problem detected: Minimum add up to zero!")
+else
+    println("The dataset is OK")
+end
+```
+{: .source}
+So if we run this conditional for the inflammation-01.csv, the output will be
+```matlab
+Problem detected: Suspicious looking maximum!
+```
+{: .output}
+which means that we have detected a problem in the first dataset. Try to run this conditional to the first three dataset to check if the other two datasets also have a problem.
+
+
 ## Next
 In the next module we're going ........................
 
