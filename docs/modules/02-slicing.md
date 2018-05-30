@@ -471,7 +471,7 @@ But what if we would like to do calculations for all patients (across the rows) 
 {: .source}
 There is an argument in the maximum function called dims, which can be either 1 or 2 if we would like to apply the function across the columns or the rows, respectively.
 
-![slicing image1]({{ site.baseurl }}/docs/images/julia_1.png)
+![slicing image1](../images/julia_1.png)
 
 
 # Exercise
