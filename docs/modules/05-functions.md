@@ -361,6 +361,148 @@ A .+ 2 .* f.(A) ./ A
 ```
 {: .output}
 
+# Inflammation datasets and functions
+In the previous modules, we learnt how to run the analysis for multiple datasets and how to use conditionals to detect problems in the inflammation datasets. Now let's go one step further and implement some functions to our code. We are going to create a function called analyze, which takes the filename as an argument and produces the plot with the three subfigures for the average, maximum and minimum inflammation per day, as well as another function called detect_problems for the detection of problems, which also takes the filename as an argument.
+Let's start with the analyze function first
+```matlab
+function analyze(filename)
+    
+    println("Processing dataset: ",filename)
+    
+    sleep(0.5)
+    
+    data = readdlm(filename, ',');
+    days=1:40;
+    
+    p1=plot(days,mean(data,1)', ylabel="Average", label="Mean", color="blue", xlims=(-2,45), ylims=(0,14))
+    p2=plot(days,maximum(data,1)', ylabel="Maximum", label="Max", c="green",alpha=0.5, fill=(0,"gray"))
+    p3=plot(days,maximum(data,1)', seriestype=:scatter, ylabel="Minimum", label="Min", marker=(:white,2,:o,stroke(1,:black))) 
+
+    p=plot(p1,p2,p3,layout=(1,3), legend=false, xlabel="Day", lw=2,size=(1000,300), grid=true)
+    display(p)
+    
+end
+```
+{: .source}
+```matlab
+analyze (generic function with 1 method)
+```
+{: .output}
+And then the detect_problems function will be 
+```matlab
+function detect_problems(filename)
+    
+    data = readdlm(filename, ',');
+
+    if (maximum(data,1)'[1]==0) & (maximum(data,1)'[21]==20)
+        println("Suspicious looking maximum!")
+    elseif sum(minimum(data,1)')==0
+        println("Minimum add up to zero!")
+    else
+        println("The dataset is OK")
+    end
+    
+end
+```
+{: .source}
+```matlab
+detect_problems (generic function with 1 method)
+```
+{: .output}
+
+Let's check if the functions are working correctly
+```matlab
+analyze("./data/inflammation-01.csv")
+```
+{: .source}
+
+![functions image1](../images/julia8.png)
+
+And let's check the detect_problems function for the third dataset as well
+```matlab
+detect_problems("./data/inflammation-03.csv")
+```
+{: .source}
+```matlab
+Minimum add up to zero!
+```
+{: .output}
+
+If we combine all the above and everything we have done so far, our analysis would be 
+```matlab
+using Plots
+using Glob
+
+filenames = sort(glob("infl*","./data/"), rev=false)
+
+for f in filenames[1:3]
+    detect_problems(f)
+    analyze(f)
+end
+```
+{: .source}
+
+![functions image2](../images/julia9.png)
+
+# Readable functions
+```matlab
+function s(p)
+    a=0
+    
+    for v in p
+        a+=v
+    end
+    
+    m=a/length(p)
+    d=0
+    
+    for v in p
+        d+=(v-m)*(v-m)
+    end
+    
+    return sqrt(d/(length(p)-1))
+end
+```
+{: .source}
+
+compared with 
+```matlab
+function std_dev(sample)
+    sample_sum=0
+    
+    for value in sample
+        sample_sum+=value
+    end
+    
+    sample_mean=sample_sum/length(sample)
+    sum_squared_devs=0
+    
+    for value in sample
+        sum_squared_devs+=(value-sample_mean)*(value-sample_mean)
+    end
+    
+    return sqrt(sum_squared_devs/(length(sample)-1))
+end
+```
+{: .source}
+
+Let's test the functions
+```matlab
+listmy=[1,5,6,3,4]
+
+
+println("s function result: ", s(listmy))
+println("std_dev function result: ",std(listmy))
+println("std built-in function result: ",std_dev(listmy))
+```
+{: .source}
+```matlab
+s function result: 1.9235384061671346
+std_dev function result: 1.9235384061671346
+std built-in function result: 1.9235384061671346
+```
+{: .output}
+
 ## Next
 In the next module we're going ........................
 
