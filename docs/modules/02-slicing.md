@@ -301,7 +301,7 @@ data[1:4,end-2]
 ```
 {: .output}
 
-# Mathematical operations and basic statistics in arrays
+# Mathematical operations and basic statistics using arrays
 We can also do operations in arrays
 ```python
 doubledata = data * 2
