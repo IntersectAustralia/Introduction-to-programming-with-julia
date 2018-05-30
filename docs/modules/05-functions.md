@@ -361,6 +361,68 @@ A .+ 2 .* f.(A) ./ A
 ```
 {: .output}
 
+# Readable functions
+```matlab
+function s(p)
+    a=0
+    
+    for v in p
+        a+=v
+    end
+    
+    m=a/length(p)
+    d=0
+    
+    for v in p
+        d+=(v-m)*(v-m)
+    end
+    
+    return sqrt(d/(length(p)-1))
+end
+```
+{: .source}
+
+compared with 
+```matlab
+function std_dev(sample)
+    sample_sum=0
+    
+    for value in sample
+        sample_sum+=value
+    end
+    
+    sample_mean=sample_sum/length(sample)
+    sum_squared_devs=0
+    
+    for value in sample
+        sum_squared_devs+=(value-sample_mean)*(value-sample_mean)
+    end
+    
+    return sqrt(sum_squared_devs/(length(sample)-1))
+end
+```
+{: .source}
+
+Let's test the functions
+```matlab
+listmy=[1,5,6,3,4]
+
+
+println("s function result: ", s(listmy))
+println("std_dev function result: ",std(listmy))
+println("std built-in function result: ",std_dev(listmy))
+```
+{: .source}
+```matlab
+s function result: 1.9235384061671346
+std_dev function result: 1.9235384061671346
+std built-in function result: 1.9235384061671346
+```
+{: .output}
+
+# Functions documentation
+To be added
+
 # Inflammation datasets and functions
 In the previous modules, we learnt how to run the analysis for multiple datasets and how to use conditionals to detect problems in the inflammation datasets. Now let's go one step further and implement some functions to our code. We are going to create a function called analyze, which takes the filename as an argument and produces the plot with the three subfigures for the average, maximum and minimum inflammation per day, as well as another function called detect_problems for the detection of problems, which also takes the filename as an argument.
 Let's start with the analyze function first
@@ -444,64 +506,7 @@ end
 
 ![functions image2](../images/julia9.png)
 
-# Readable functions
-```matlab
-function s(p)
-    a=0
-    
-    for v in p
-        a+=v
-    end
-    
-    m=a/length(p)
-    d=0
-    
-    for v in p
-        d+=(v-m)*(v-m)
-    end
-    
-    return sqrt(d/(length(p)-1))
-end
-```
-{: .source}
 
-compared with 
-```matlab
-function std_dev(sample)
-    sample_sum=0
-    
-    for value in sample
-        sample_sum+=value
-    end
-    
-    sample_mean=sample_sum/length(sample)
-    sum_squared_devs=0
-    
-    for value in sample
-        sum_squared_devs+=(value-sample_mean)*(value-sample_mean)
-    end
-    
-    return sqrt(sum_squared_devs/(length(sample)-1))
-end
-```
-{: .source}
-
-Let's test the functions
-```matlab
-listmy=[1,5,6,3,4]
-
-
-println("s function result: ", s(listmy))
-println("std_dev function result: ",std(listmy))
-println("std built-in function result: ",std_dev(listmy))
-```
-{: .source}
-```matlab
-s function result: 1.9235384061671346
-std_dev function result: 1.9235384061671346
-std built-in function result: 1.9235384061671346
-```
-{: .output}
 
 ## Next
 In the next module we're going ........................
