@@ -52,6 +52,7 @@ using Plots
 ```
 {: .source}
 
+# Load files
 Let's load our CSV file:
 ```python
 data2 = CSV.read("./data/inflammation-01.csv", delim=",",header=false)
@@ -300,6 +301,7 @@ data[1:4,end-2]
 ```
 {: .output}
 
+# Mathematical operations and basic statistics in arrays
 We can also do operations in arrays
 ```python
 doubledata = data * 2
@@ -492,6 +494,7 @@ size(mean(data,2))
 ```
 {: .output}
 
+# Plotting
 Let's create our plot for the average inflammation per day for our dataset.
 ```python
 avg_inflammation = mean(data,1);
