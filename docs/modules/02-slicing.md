@@ -75,16 +75,57 @@ The scope of this introductory course doesn't cover Dataframes, which is a more 
 data=readdlm("./data/inflammation-01.csv",',')
 ```
 {: .source}
+
+```python
+60×40 Array{Float64,2}:
+ 0.0  0.0  1.0  3.0  1.0  2.0  4.0  7.0  …  7.0  3.0  4.0  2.0  3.0  0.0  0.0
+ 0.0  1.0  2.0  1.0  2.0  1.0  3.0  2.0     4.0  5.0  5.0  1.0  1.0  0.0  1.0
+ 0.0  1.0  1.0  3.0  3.0  2.0  6.0  2.0     2.0  2.0  3.0  2.0  2.0  1.0  1.0
+ 0.0  0.0  2.0  0.0  4.0  2.0  2.0  1.0     3.0  3.0  4.0  2.0  3.0  2.0  1.0
+ 0.0  1.0  1.0  3.0  3.0  1.0  3.0  5.0     2.0  2.0  4.0  2.0  0.0  1.0  1.0
+ 0.0  0.0  1.0  2.0  2.0  4.0  2.0  1.0  …  3.0  5.0  4.0  4.0  3.0  2.0  1.0
+ 0.0  0.0  2.0  2.0  4.0  2.0  2.0  5.0     2.0  3.0  5.0  4.0  1.0  1.0  1.0
+ 0.0  0.0  1.0  2.0  3.0  1.0  2.0  3.0     5.0  2.0  5.0  3.0  2.0  2.0  1.0
+ 0.0  0.0  0.0  3.0  1.0  5.0  6.0  5.0     7.0  6.0  3.0  2.0  1.0  0.0  0.0
+ 0.0  1.0  1.0  2.0  1.0  3.0  5.0  3.0     5.0  1.0  4.0  1.0  2.0  0.0  0.0
+ 0.0  1.0  0.0  0.0  4.0  3.0  3.0  5.0  …  5.0  5.0  3.0  3.0  2.0  2.0  1.0
+ 0.0  1.0  0.0  0.0  3.0  4.0  2.0  7.0     4.0  5.0  5.0  4.0  0.0  1.0  1.0
+ 0.0  0.0  2.0  1.0  4.0  3.0  6.0  4.0     3.0  5.0  4.0  2.0  3.0  0.0  1.0
+ ⋮                        ⋮              ⋱            ⋮                      
+ 0.0  0.0  1.0  3.0  2.0  5.0  1.0  2.0     3.0  1.0  5.0  4.0  3.0  0.0  0.0
+ 0.0  0.0  1.0  2.0  3.0  4.0  5.0  7.0     4.0  1.0  4.0  2.0  2.0  2.0  1.0
+ 0.0  1.0  2.0  1.0  1.0  3.0  5.0  3.0  …  3.0  6.0  3.0  4.0  1.0  2.0  0.0
+ 0.0  1.0  2.0  2.0  3.0  5.0  2.0  4.0     1.0  3.0  2.0  1.0  3.0  1.0  0.0
+ 0.0  0.0  0.0  2.0  4.0  4.0  5.0  3.0     5.0  2.0  2.0  4.0  1.0  2.0  1.0
+ 0.0  0.0  2.0  1.0  1.0  4.0  4.0  7.0     4.0  1.0  4.0  2.0  2.0  2.0  1.0
+ 0.0  1.0  2.0  1.0  1.0  4.0  5.0  4.0     2.0  2.0  5.0  1.0  0.0  0.0  1.0
+ 0.0  0.0  1.0  3.0  2.0  3.0  6.0  4.0  …  5.0  4.0  5.0  3.0  3.0  0.0  1.0
+ 0.0  1.0  1.0  2.0  2.0  5.0  1.0  7.0     6.0  3.0  4.0  2.0  2.0  1.0  1.0
+ 0.0  1.0  1.0  1.0  4.0  1.0  6.0  4.0     4.0  3.0  5.0  2.0  1.0  1.0  1.0
+ 0.0  0.0  0.0  1.0  4.0  5.0  6.0  3.0     6.0  5.0  5.0  2.0  0.0  2.0  0.0
+ 0.0  0.0  1.0  0.0  3.0  2.0  5.0  4.0     5.0  4.0  1.0  3.0  1.0  1.0  0.0
+```
+{: .output}
+
 and check the size of the data array
 ```python
 size(data)
 ```
 {: .source}
+```python
+(60, 40)
+```
+{: .output}
 and its type
 ```python
 typeof(data)
 ```
 {: .source}
+```python
+Array{Float64,2}
+```
+{: .output}
+
 
 # Slicing
 In this section, we are going to learn how to select elements of the array. To select an element, you need to define the name of the array followed by the square brackets and within the brackets you need to define the number of the row and column. For example, if we would like to select the element from the first row and the first column:
@@ -92,22 +133,42 @@ In this section, we are going to learn how to select elements of the array. To s
 println("First value in data: ",data[1,1])
 ```
 {: .source}
+```python
+First value in data: 0.0
+```
+{: .output}
 or the item from the last row and last column
 ```python
 println("Last value in data: ",data[end,end])
 ```
 {: .source}
+```python
+Last value in data: 0.0
+```
+{: .output}
 or any other element by defining the number of the row and column
 ```python
 println("Middle value in data: ",data[30,20])
 ```
 {: .source}
+```python
+Middle value in data: 16.0
+```
+{: .output}
 
 You can also select multiple rows or columns at once
 ```python
 data[1:4,1:10]
 ```
 {: .source}
+```python
+4×10 Array{Float64,2}:
+ 0.0  0.0  1.0  3.0  1.0  2.0  4.0  7.0  8.0  3.0
+ 0.0  1.0  2.0  1.0  2.0  1.0  3.0  2.0  2.0  6.0
+ 0.0  1.0  1.0  3.0  3.0  2.0  6.0  2.0  5.0  9.0
+ 0.0  0.0  2.0  0.0  4.0  2.0  2.0  1.0  6.0  7.0
+```
+{: .output}
 In the previous example, we have selected all the elements from row 1 to 4 and from column 1 to 10. 
 
 It is not necessary to slice an array starting from the beginning. We can slice using any numbers of the rows and columns
@@ -115,72 +176,302 @@ It is not necessary to slice an array starting from the beginning. We can slice 
 data[5:10,5:10]
 ```
 {: .source}
+```python
+6×6 Array{Float64,2}:
+ 3.0  1.0  3.0  5.0  2.0  4.0
+ 2.0  4.0  2.0  1.0  6.0  4.0
+ 4.0  2.0  2.0  5.0  5.0  8.0
+ 3.0  1.0  2.0  3.0  5.0  3.0
+ 1.0  5.0  6.0  5.0  5.0  8.0
+ 1.0  3.0  5.0  3.0  5.0  8.0
+```
+{: .output}
 
 Another example
 ```python
 data_small = data[1:4,36:end]
 ```
 {: .source}
+```python
+4×5 Array{Float64,2}:
+ 4.0  2.0  3.0  0.0  0.0
+ 5.0  1.0  1.0  0.0  1.0
+ 3.0  2.0  2.0  1.0  1.0
+ 4.0  2.0  3.0  2.0  1.0
+```
+{: .output}
 
 You can also slice the array by selecting the rows 1, 4, 7 and 10 (or rows 1 to 10 with a step of 3) and the columns 1 to 10 with a step of 2
 ```python
 data[1:3:10,1:2:10]
 ```
 {: .source}
+```python
+4×5 Array{Float64,2}:
+ 0.0  1.0  1.0  4.0  8.0
+ 0.0  2.0  4.0  2.0  6.0
+ 0.0  2.0  4.0  2.0  5.0
+ 0.0  1.0  1.0  5.0  5.0
+```
+{: .output}
 
 If we would like to select all the rows or columns, we can use the : without defining anything
 ```python
 data[:,1]
 ```
 {: .source}
+```python
+60-element Array{Float64,1}:
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ ⋮  
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+```
+{: .output}
 or for the columns
 ```python
 data[1,:]
 ```
 {: .source}
+```python
+40-element Array{Float64,1}:
+  0.0
+  0.0
+  1.0
+  3.0
+  1.0
+  2.0
+  4.0
+  7.0
+  8.0
+  3.0
+  3.0
+  3.0
+ 10.0
+  ⋮  
+  8.0
+  8.0
+  4.0
+  4.0
+  5.0
+  7.0
+  3.0
+  4.0
+  2.0
+  3.0
+  0.0
+  0.0
+```
+{: .output}
 
 Another example
 ```python
 data[1:4,end-2]
 ```
 {: .source}
+```python
+4-element Array{Float64,1}:
+ 3.0
+ 1.0
+ 2.0
+ 3.0
+```
+{: .output}
 
 We can also do operations in arrays
 ```python
 doubledata = data * 2
 ```
 {: .source}
+```python
+60×40 Array{Float64,2}:
+ 0.0  0.0  2.0  6.0  2.0   4.0   8.0  14.0  …   6.0   8.0  4.0  6.0  0.0  0.0
+ 0.0  2.0  4.0  2.0  4.0   2.0   6.0   4.0     10.0  10.0  2.0  2.0  0.0  2.0
+ 0.0  2.0  2.0  6.0  6.0   4.0  12.0   4.0      4.0   6.0  4.0  4.0  2.0  2.0
+ 0.0  0.0  4.0  0.0  8.0   4.0   4.0   2.0      6.0   8.0  4.0  6.0  4.0  2.0
+ 0.0  2.0  2.0  6.0  6.0   2.0   6.0  10.0      4.0   8.0  4.0  0.0  2.0  2.0
+ 0.0  0.0  2.0  4.0  4.0   8.0   4.0   2.0  …  10.0   8.0  8.0  6.0  4.0  2.0
+ 0.0  0.0  4.0  4.0  8.0   4.0   4.0  10.0      6.0  10.0  8.0  2.0  2.0  2.0
+ 0.0  0.0  2.0  4.0  6.0   2.0   4.0   6.0      4.0  10.0  6.0  4.0  4.0  2.0
+ 0.0  0.0  0.0  6.0  2.0  10.0  12.0  10.0     12.0   6.0  4.0  2.0  0.0  0.0
+ 0.0  2.0  2.0  4.0  2.0   6.0  10.0   6.0      2.0   8.0  2.0  4.0  0.0  0.0
+ 0.0  2.0  0.0  0.0  8.0   6.0   6.0  10.0  …  10.0   6.0  6.0  4.0  4.0  2.0
+ 0.0  2.0  0.0  0.0  6.0   8.0   4.0  14.0     10.0  10.0  8.0  0.0  2.0  2.0
+ 0.0  0.0  4.0  2.0  8.0   6.0  12.0   8.0     10.0   8.0  4.0  6.0  0.0  2.0
+ ⋮                         ⋮                ⋱         ⋮                      
+ 0.0  0.0  2.0  6.0  4.0  10.0   2.0   4.0      2.0  10.0  8.0  6.0  0.0  0.0
+ 0.0  0.0  2.0  4.0  6.0   8.0  10.0  14.0      2.0   8.0  4.0  4.0  4.0  2.0
+ 0.0  2.0  4.0  2.0  2.0   6.0  10.0   6.0  …  12.0   6.0  8.0  2.0  4.0  0.0
+ 0.0  2.0  4.0  4.0  6.0  10.0   4.0   8.0      6.0   4.0  2.0  6.0  2.0  0.0
+ 0.0  0.0  0.0  4.0  8.0   8.0  10.0   6.0      4.0   4.0  8.0  2.0  4.0  2.0
+ 0.0  0.0  4.0  2.0  2.0   8.0   8.0  14.0      2.0   8.0  4.0  4.0  4.0  2.0
+ 0.0  2.0  4.0  2.0  2.0   8.0  10.0   8.0      4.0  10.0  2.0  0.0  0.0  2.0
+ 0.0  0.0  2.0  6.0  4.0   6.0  12.0   8.0  …   8.0  10.0  6.0  6.0  0.0  2.0
+ 0.0  2.0  2.0  4.0  4.0  10.0   2.0  14.0      6.0   8.0  4.0  4.0  2.0  2.0
+ 0.0  2.0  2.0  2.0  8.0   2.0  12.0   8.0      6.0  10.0  4.0  2.0  2.0  2.0
+ 0.0  0.0  0.0  2.0  8.0  10.0  12.0   6.0     10.0  10.0  4.0  0.0  4.0  0.0
+ 0.0  0.0  2.0  0.0  6.0   4.0  10.0   8.0      8.0   2.0  6.0  2.0  2.0  0.0
+```
+{: .output}
 or
 ```python
 tripledata = data + doubledata
 ```
 {: .source}
+```python
+60×40 Array{Float64,2}:
+ 0.0  0.0  3.0  9.0   3.0   6.0  12.0  …   9.0  12.0   6.0  9.0  0.0  0.0
+ 0.0  3.0  6.0  3.0   6.0   3.0   9.0     15.0  15.0   3.0  3.0  0.0  3.0
+ 0.0  3.0  3.0  9.0   9.0   6.0  18.0      6.0   9.0   6.0  6.0  3.0  3.0
+ 0.0  0.0  6.0  0.0  12.0   6.0   6.0      9.0  12.0   6.0  9.0  6.0  3.0
+ 0.0  3.0  3.0  9.0   9.0   3.0   9.0      6.0  12.0   6.0  0.0  3.0  3.0
+ 0.0  0.0  3.0  6.0   6.0  12.0   6.0  …  15.0  12.0  12.0  9.0  6.0  3.0
+ 0.0  0.0  6.0  6.0  12.0   6.0   6.0      9.0  15.0  12.0  3.0  3.0  3.0
+ 0.0  0.0  3.0  6.0   9.0   3.0   6.0      6.0  15.0   9.0  6.0  6.0  3.0
+ 0.0  0.0  0.0  9.0   3.0  15.0  18.0     18.0   9.0   6.0  3.0  0.0  0.0
+ 0.0  3.0  3.0  6.0   3.0   9.0  15.0      3.0  12.0   3.0  6.0  0.0  0.0
+ 0.0  3.0  0.0  0.0  12.0   9.0   9.0  …  15.0   9.0   9.0  6.0  6.0  3.0
+ 0.0  3.0  0.0  0.0   9.0  12.0   6.0     15.0  15.0  12.0  0.0  3.0  3.0
+ 0.0  0.0  6.0  3.0  12.0   9.0  18.0     15.0  12.0   6.0  9.0  0.0  3.0
+ ⋮                          ⋮          ⋱         ⋮                       
+ 0.0  0.0  3.0  9.0   6.0  15.0   3.0      3.0  15.0  12.0  9.0  0.0  0.0
+ 0.0  0.0  3.0  6.0   9.0  12.0  15.0      3.0  12.0   6.0  6.0  6.0  3.0
+ 0.0  3.0  6.0  3.0   3.0   9.0  15.0  …  18.0   9.0  12.0  3.0  6.0  0.0
+ 0.0  3.0  6.0  6.0   9.0  15.0   6.0      9.0   6.0   3.0  9.0  3.0  0.0
+ 0.0  0.0  0.0  6.0  12.0  12.0  15.0      6.0   6.0  12.0  3.0  6.0  3.0
+ 0.0  0.0  6.0  3.0   3.0  12.0  12.0      3.0  12.0   6.0  6.0  6.0  3.0
+ 0.0  3.0  6.0  3.0   3.0  12.0  15.0      6.0  15.0   3.0  0.0  0.0  3.0
+ 0.0  0.0  3.0  9.0   6.0   9.0  18.0  …  12.0  15.0   9.0  9.0  0.0  3.0
+ 0.0  3.0  3.0  6.0   6.0  15.0   3.0      9.0  12.0   6.0  6.0  3.0  3.0
+ 0.0  3.0  3.0  3.0  12.0   3.0  18.0      9.0  15.0   6.0  3.0  3.0  3.0
+ 0.0  0.0  0.0  3.0  12.0  15.0  18.0     15.0  15.0   6.0  0.0  6.0  0.0
+ 0.0  0.0  3.0  0.0   9.0   6.0  15.0     12.0   3.0   9.0  3.0  3.0  0.0
+```
+{: .output}
 
 We can also perform basic statistics in the array
 ```python
 mean(data)
 ```
 {: .source}
+```python
+6.14875
+```
+{: .output}
 
 ```python
 maximum(data)
 ```
 {: .source}
+```python
+20.0
+```
+{: .output}
 
 ```python
 minimum(data)
 ```
 {: .source}
+```python
+0.0
+```
+{: .output}
 
 ```python
 std(data)
 ```
 {: .source}
+```python
+4.614794712852068
+```
+{: .output}
 
+If we would like to select the data for patient 1, we have to select the first row and all the columns.
+```python
+patient_1 = data[1,:]
+```
+{: .source}
+```python
+40-element Array{Float64,1}:
+  0.0
+  0.0
+  1.0
+  3.0
+  1.0
+  2.0
+  4.0
+  7.0
+  8.0
+  3.0
+  3.0
+  3.0
+ 10.0
+  ⋮  
+  8.0
+  8.0
+  4.0
+  4.0
+  5.0
+  7.0
+  3.0
+  4.0
+  2.0
+  3.0
+  0.0
+  0.0
+```
+{: .output}
 
+Calculate the maximum inflammation for patient 1
+```python
+println("Maximum inflammation for patient 1: ", maximum(patient_1))
+```
+{: .source}
+```python
+Maximum inflammation for patient 1: 18.0
+```
+{: .output}
 
+If we would like to calculate the maximum inflammation for patient 3
+```python
+println("Maximum inflammation for patient 3: ", maximum(data[3,:]))
+```
+{: .source}
+```python
+Maximum inflammation for patient 3: 19.0
+```
+{: .output}
 
+But what if we would like to do calculations for all patients (across the rows) or for all days (across the columns)? There should be an automatic way to do that kind of operations. Let's have a look at the help of the maximum function. 
+```python
+?maximum
+```
+{: .source}
+There is an argument in the maximum function called dims, which can be either 1 or 2 if we would like to apply the function across the columns or the rows, respectively.
 
+![slicing image1]({{ site.baseurl }}/docs/images/julia_1.png)
 
 
 # Exercise
