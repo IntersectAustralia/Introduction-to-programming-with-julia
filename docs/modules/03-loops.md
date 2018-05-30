@@ -6,10 +6,10 @@ show-in-nav-bar: true
 ---
 
 > Learning objectives:
-> - Explain what a for and while loop does.
-> - Correctly write for and while loops to repeat simple calculations.
-> - Trace changes to a loop variable as the loop runs.
-> - Trace changes to other variables as they are updated by a for loop
+> - ...
+> - ...
+> - ...
+> - ...
 {: .objective}
 
 Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
