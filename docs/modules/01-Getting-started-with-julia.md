@@ -414,7 +414,7 @@ fibonacci
 Here is a list of useful function in Julia for basic operations.
 
 |Function|&nbsp;&nbsp;&nbsp;&nbsp;Description|
-|:---: |:--- |
+|:--- |:--- |
 |round(x, N)|&nbsp;&nbsp;&nbsp;&nbsp;round x to the nearest integer using N decimal points|
 |floor(x, N)|&nbsp;&nbsp;&nbsp;&nbsp;round x to the nearest lower integer using N decimal points|
 |ceil(x, N)|&nbsp;&nbsp;&nbsp;&nbsp;round x to the nearest upper integer using N decimal points|
