@@ -301,6 +301,12 @@ data[1:4,end-2]
 ```
 {: .output}
 
+
+# Basic functions for Arrays
+Here is a list of functions that are useful for Arrays. 
+
+
+
 # Mathematical operations and basic statistics using arrays
 We can also do operations in arrays
 ```python
