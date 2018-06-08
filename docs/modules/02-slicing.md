@@ -305,6 +305,22 @@ data[1:4,end-2]
 # Basic functions for Arrays
 Here is a list of functions that are useful for Arrays. 
 
+|Function|&nbsp;&nbsp;&nbsp;&nbsp;Description|
+|:--- |:--- |
+|eltype(A)|&nbsp;&nbsp;&nbsp;&nbsp;the type of the elements contained in A|
+|length(A)|&nbsp;&nbsp;&nbsp;&nbsp;the number of elements in A|
+|ndims(A)|&nbsp;&nbsp;&nbsp;&nbsp;the number of dimensions of A|
+|size(A)|&nbsp;&nbsp;&nbsp;&nbsp;a tuple containing the dimensions of A|
+|size(A, n)|&nbsp;&nbsp;&nbsp;&nbsp;the size of A along dimension n|
+|indices(A)|&nbsp;&nbsp;&nbsp;&nbsp;a tuple containing the valid indices of A|
+|indices(A, n)|&nbsp;&nbsp;&nbsp;&nbsp;a range expressing the valid indices along dimension n|
+|zeros(dim1, dim2)|&nbsp;&nbsp;&nbsp;&nbsp;an Array of all zeros with dim1 number of rows and dim2 number of columns|
+|ones(dim1, dim2)|&nbsp;&nbsp;&nbsp;&nbsp;an Array of all ones with dim1 number of rows and dim2 number of columns|
+|reshape(A,(dim1, dim2))|&nbsp;&nbsp;&nbsp;&nbsp;an Array containing the same data as A, but with different dimensions|
+|rand(dim1, dim2)|&nbsp;&nbsp;&nbsp;&nbsp;an Array with random numbers from a uniform distribution and interval [0,1)|
+|randn(dim1, dim2)|&nbsp;&nbsp;&nbsp;&nbsp;an Array with random numbers from a standard normal distribution|
+|linspace(start,stop,n)|&nbsp;&nbsp;&nbsp;&nbsp;range of n linearly spaced elements from start to stop|
+|fill(x,(dim1,dim2))|&nbsp;&nbsp;&nbsp;&nbsp;an Array filled with the value x|
 
 
 # Mathematical operations and basic statistics using arrays
