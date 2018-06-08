@@ -484,6 +484,59 @@ A .+ 2 .* f.(A) ./ A
 ```
 {: .output}
 
+# Function documentation
+The basic syntax is very simple: any string appearing at the top-level right before an object (function, macro, type or instance) will be interpreted as documenting it (these are called docstrings). Here is a very simple example:
+```matlab
+"This is a sample of a function documentation"
+function my_func(a,b)
+   println("a is:",a," while b is:",b) 
+    
+end
+```
+{: .source}
+
+Let's check the documentation of my_func
+```matlab
+?my_func
+```
+{: .source}
+
+```matlab
+search:
+
+This is a sample of a function documentation
+```
+{: .output}
+
+Documentation is interpreted as Markdown, so you can use indentation and code fences to delimit code examples from text. Technically, any object can be associated with any other as metadata; Markdown happens to be the default, but one can construct other string macros and pass them to the @doc macro just as well.
+
+Here is a more complex example, still using Markdown:
+```matlab
+"""
+This is a more complex function documentation:
+
+    my_func(a,b)
+
+- This function **prints** the arguments a and b. 
+- It doesn't use any default values.
+"""
+function my_func(a,b)
+   println("a is:",a," while b is:",b) 
+    
+end
+```
+{: .source}
+
+check the documentation of my_func
+```matlab
+?my_func
+```
+{: .source}
+
+Please find in the link below some tips when writing documentation:
+https://docs.julialang.org/en/stable/manual/documentation/#Documentation-1
+
+
 # Readable functions
 ```matlab
 function s(p)
@@ -543,8 +596,6 @@ std built-in function result: 1.9235384061671346
 ```
 {: .output}
 
-# Functions documentation
-To be added
 
 # Inflammation datasets and functions
 In the previous modules, we learnt how to run the analysis for multiple datasets and how to use conditionals to detect problems in the inflammation datasets. Now let's go one step further and implement some functions to our code. We are going to create a function called analyze, which takes the filename as an argument and produces the plot with the three subfigures for the average, maximum and minimum inflammation per day, as well as another function called detect_problems for the detection of problems, which also takes the filename as an argument.
