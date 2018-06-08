@@ -39,7 +39,9 @@ TODO: Move objectives to YML and auto-populate the table below..
 | | | |
 |5|&nbsp;&nbsp;&nbsp;&nbsp;[Creating Functions]({{ site.baseurl }}/modules/05-functions)|&nbsp;&nbsp;&nbsp;&nbsp;Text needed|
 | | | |
-|6|&nbsp;&nbsp;&nbsp;&nbsp;[Wrapping up]({{ site.baseurl }}/modules/06-wrapping-up)|&nbsp;&nbsp;&nbsp;&nbsp;Text needed|       
+|6|&nbsp;&nbsp;&nbsp;&nbsp;[Scope of Variables]({{ site.baseurl }}/modules/06-scope-of-variables)|&nbsp;&nbsp;&nbsp;&nbsp;Text needed|
+| | | |
+|7|&nbsp;&nbsp;&nbsp;&nbsp;[Wrapping up]({{ site.baseurl }}/modules/07-wrapping-up)|&nbsp;&nbsp;&nbsp;&nbsp;Text needed|       
 
 
 
