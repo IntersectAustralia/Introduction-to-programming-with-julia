@@ -1,4 +1,18 @@
+---
+layout: page
+title: "Scope of Variables"
+short-title: "Mod. 6" # This will appear in the Nav bar in the header
+show-in-nav-bar: true
+---
 
+> Learning objectives:
+> - ...
+> - ...
+> - ...
+{: .objective}
+
+# ....
+Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 
 
 
