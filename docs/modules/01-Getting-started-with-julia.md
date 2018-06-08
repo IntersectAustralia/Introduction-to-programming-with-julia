@@ -413,9 +413,36 @@ fibonacci
 # Useful functions in Julia
 Here is a list of useful function in Julia for basic operations.
 
-| Function | Description |
-| -------- | ----------- |
+|Function|&nbsp;&nbsp;&nbsp;&nbsp;Description|
+|:---: |:--- |
+|round(x, N)|&nbsp;&nbsp;&nbsp;&nbsp;round x to the nearest integer using N decimal points|
+|floor(x, N)|&nbsp;&nbsp;&nbsp;&nbsp;round x to the nearest lower integer using N decimal points|
+|ceil(x, N)|&nbsp;&nbsp;&nbsp;&nbsp;round x to the nearest upper integer using N decimal points|
+|abs(x)|&nbsp;&nbsp;&nbsp;&nbsp;the absolute value of x|
+|sign(x)|&nbsp;&nbsp;&nbsp;&nbsp;indicates the sign of x|
+|sqrt(x)|&nbsp;&nbsp;&nbsp;&nbsp;square root of x|
+|exp(x)|&nbsp;&nbsp;&nbsp;&nbsp;natural exponential function at x|
+|log(x)|&nbsp;&nbsp;&nbsp;&nbsp;natural logarithm of x|
+|log(b, x)|&nbsp;&nbsp;&nbsp;&nbsp;base b logarithm of x|
+|log10(x)|&nbsp;&nbsp;&nbsp;&nbsp;base 10 logarithm of x|
+|A'|&nbsp;&nbsp;&nbsp;&nbsp;transpose of matrix/array A|
 
+## Trigonometric and hyperbolic functions
+
+sin    cos    tan    cot    sec    csc
+sinh   cosh   tanh   coth   sech   csch
+asin   acos   atan   acot   asec   acsc
+asinh  acosh  atanh  acoth  asech  acsch
+sinc   cosc   atan2
+
+These are all single-argument functions, with the exception of atan2, which gives the angle in radians between the x-axis and the point specified by its arguments, interpreted as x and y coordinates.
+
+Additionally, sinpi(x) and cospi(x) are provided for more accurate computations of sin(pi*x) and cos(pi*x) respectively.
+
+In order to compute trigonometric functions with degrees instead of radians, suffix the function with d. For example, sind(x) computes the sine of x where x is specified in degrees. The complete list of trigonometric functions with degree variants is:
+
+sind   cosd   tand   cotd   secd   cscd
+asind  acosd  atand  acotd  asecd  acscd
 
 ## Next
 In the next module we're going ........................
