@@ -187,6 +187,129 @@ myprint(b=5,a=1)
 {: .source}
 
 
+# Multiple dispatch
+Multiple dispatch makes software generic and fast!
+
+Let's start by exploring an example. We can declare functions in Julia without giving Julia any information about the types of the input arguments that function will receive:
+```matlab
+f(x) = (2*x)^3 
+```
+{: .source}
+and then Julia will determine on its own which input argument types make sense and which do not:
+```matlab
+f(10)
+```
+{: .source}
+```matlab
+
+```
+{: .output}
+or 
+```matlab
+f([1, 2, 3])
+```
+{: .source}
+```matlab
+
+```
+{: .output}
+
+Specifying the types of our input arguments
+However, we also have the option to tell Julia explicitly what types our input arguments are allowed to have.
+For example, let's write a function foo that only takes strings as inputs.
+```matlab
+my_funct(a::String, b::String) = println("My inputs a and b are both strings!")
+```
+{: .source}
+
+We see here that in order to restrict the type of x and y to Strings, we just follow the input argument name by a double colon and the keyword String.
+
+Now we'll see that foo works on Strings 
+```matlab
+my_funct("hello", "hi!")
+```
+{: .source}
+```matlab
+
+```
+{: .output}
+and doesn't work on other input argument types.
+```matlab
+my_func(3, 4)
+```
+{: .source}
+```matlab
+
+```
+{: .output}
+
+Now foo works on integers! But look, foo also still works when x and y are strings!
+```matlab
+my_func("hello", "hi!")
+```
+{: .source}
+```matlab
+
+```
+{: .output}
+
+This is starting to get to the heart of multiple dispatch. When we declared
+
+my_func(a::Int, b::Int) = println("My inputs a and b are both integers!")
+we didn't overwrite or replace
+
+my_func(a::String, b::String)
+Instead, we just added an additional *method* to the *generic function* called my_func.
+
+A *generic function* is the abstract concept associated with a particular operation.
+
+For example, the generic function + represents the concept of addition.
+
+A *method* is a specific implementation of a generic function for particular argument types.
+
+For example, + has methods that accept floating point numbers, integers, matrices, etc.
+
+We can use the methods to see how many methods there are for foo.
+```matlab
+methods(my_func)
+```
+{: .source}
+```matlab
+
+```
+{: .output}
+
+So, we now can call foo on integers or strings. When you call foo on a particular set of arguments, Julia will infer the types of the inputs and dispatch the appropriate method. This is multiple dispatch.
+
+Multiple dispatch makes our code generic and fast. Our code can be generic and flexible because we can write code in terms of abstract operations such as addition and multiplication, rather than in terms of specific implementations. At the same time, our code runs quickly because Julia is able to call efficient methods for the relevant types.
+
+To see which method is being dispatched when we call a generic function, we can use the @which macro:
+```matlab
+@which my_func(3, 4)
+```
+{: .source}
+```matlab
+
+```
+{: .output}
+
+And we can continue to add other methods to our generic function foo. Let's add one that takes the abstract type Number, which includes subtypes such as Int, Float64, and other objects you would think of as numbers:
+```matlab
+my_func(a::Number, b::Number) = println("My inputs a and b are both numbers!")
+```
+{: .source}
+
+We can also add a fallback, duck-typed method for foo that takes inputs of any type:
+```matlab
+my_func(a, b) = println("I accept inputs of any type!")
+```
+{: .source}
+
+##Exercise
+- Create a function that takes only one argument, which is type Bool, and prints "...."
+- Check what method being dispatched when you execute .....
+- add the argument to be also string
+
 # Mutating vs non-mutating functions
 By convention, functions followed by the exclamation mark symbol (!) after their contents and functions lacking ! do not. 
 
