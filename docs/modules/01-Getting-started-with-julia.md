@@ -410,6 +410,12 @@ fibonacci
 > Add the number 4 to the end of this array and then remove it
 {: .inset}
 
+# Useful functions in Julia
+Here is a list of useful function in Julia for basic operations.
+
+| Function | Description |
+| -------- | ----------- |
+
 
 ## Next
 In the next module we're going ........................
