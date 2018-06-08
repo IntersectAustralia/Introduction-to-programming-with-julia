@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Wrapping Up"
-short-title: "Mod. 6" # This will appear in the Nav bar in the header
+short-title: "Mod. 7" # This will appear in the Nav bar in the header
 show-in-nav-bar: true
 ---
 
