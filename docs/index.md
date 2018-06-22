@@ -21,13 +21,13 @@ Julia’s compiler combined with the language’s design allow it to approach an
 
 ![Julia performance](../images/julia_performance.png)
 
-# Flexibility
+## Flexibility
 
 By design, Julia allows you to range from tight low-level loops, up to a high-level programming style, while sacrificing some performance, but gaining the ability to express complex algorithms easily. This continuous spectrum of programming levels is a hallmark of the Julia approach to programming and is very much an intentional feature of the language. 
 
 The language can be built as a shared library, so users can combine Julia with their own C/Fortran code or proprietary third-party libraries. Furthermore, Julia makes it simple to call external functions in C and Fortran shared libraries, without writing any wrapper code or even recompiling existing code. You can try calling external library functions directly from Julia’s interactive prompt, getting immediate feedback.
 
-# Parallelisation
+## Parallelisation
 
 Julia does not impose any particular style of parallelism on the user. Instead, it provides a number of key building blocks for distributed computation, making it flexible enough to support a number of styles of parallelism, and allowing users to add more.
 
