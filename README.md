@@ -19,18 +19,24 @@ Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 
 # Outline
 
-TODO: Move objectives to YML and auto-populate the table below..
-
-|Module number|&nbsp;&nbsp;&nbsp;&nbsp;Name|&nbsp;&nbsp;&nbsp;&nbsp;Learning Objectives|
-|:---: |:--- |:--- |
-|0|&nbsp;&nbsp;&nbsp;&nbsp;[Setup](https://intersectaustralia.github.io/Introduction-to-programming-with-julia/modules/00-setup/)|&nbsp;&nbsp;&nbsp;&nbsp;How to setup the Julia environment|
-|1|&nbsp;&nbsp;&nbsp;&nbsp;[Getting Started with Julia](https://intersectaustralia.github.io/Introduction-to-programming-with-julia/modules/01-Getting-started-with-julia/)|&nbsp;&nbsp;&nbsp;&nbsp;How to do basic operations, what is a variable, strings|
-|2|&nbsp;&nbsp;&nbsp;&nbsp;[Selecting Elements from an Array](https://intersectaustralia.github.io/Introduction-to-programming-with-julia/modules/02-slicing/)|&nbsp;&nbsp;&nbsp;&nbsp;Text needed|
-|3|&nbsp;&nbsp;&nbsp;&nbsp;[Repeating Actions with Loops](https://intersectaustralia.github.io/Introduction-to-programming-with-julia/modules/03-loops/)|&nbsp;&nbsp;&nbsp;&nbsp;Text needed|
-|4|&nbsp;&nbsp;&nbsp;&nbsp;[Making Choices with Conditionals](https://intersectaustralia.github.io/Introduction-to-programming-with-julia/modules/04-conditionals/)|&nbsp;&nbsp;&nbsp;&nbsp;Text needed|
-|5|&nbsp;&nbsp;&nbsp;&nbsp;[Creating Functions](https://intersectaustralia.github.io/Introduction-to-programming-with-julia/modules/05-functions/)|&nbsp;&nbsp;&nbsp;&nbsp;Text needed|
-|6|&nbsp;&nbsp;&nbsp;&nbsp;[Scope of Variables](https://intersectaustralia.github.io/Introduction-to-programming-with-julia/modules/06-scope-of-variables/)|&nbsp;&nbsp;&nbsp;&nbsp;Text needed| 
-|7|&nbsp;&nbsp;&nbsp;&nbsp;[Wrapping up](https://intersectaustralia.github.io/Introduction-to-programming-with-julia/modules/07-wrapping-up/)|&nbsp;&nbsp;&nbsp;&nbsp;Text needed|       
+|Module number|Name|&nbsp;&nbsp;&nbsp;&nbsp;Learning Objectives|
+|:--- |:---: |---: |
+| | | |
+|0|[Setup]({{ site.baseurl }}/modules/00-setup)|&nbsp;&nbsp;&nbsp;&nbsp;Setup for this course and how to setup Julia environment on your local machine|
+| | | |
+|1|[Getting Started with Julia]({{ site.baseurl }}/modules/01-Getting-started-with-julia)|&nbsp;&nbsp;&nbsp;&nbsp;An introduction to basic elements of programming, such as variable types, data structures and useful built-in functions|
+| | | |
+|2|[Selecting Elements from an Array]({{ site.baseurl }}/modules/02-slicing)|&nbsp;&nbsp;&nbsp;&nbsp;Learn how to import packages (libraries) in Julia, how to load csv files, how to slice and select specific elements from an array, how to perform basic operations and stats using arrays, and how to start using plots.|
+| | | |
+|3|[Repeating Actions with Loops]({{ site.baseurl }}/modules/03-loops)|&nbsp;&nbsp;&nbsp;&nbsp;Learn how to use for and while loops for repeating actions in programming.|
+| | | |
+|4|[Making Choices with Conditionals]({{ site.baseurl }}/modules/04-conditionals)|&nbsp;&nbsp;&nbsp;&nbsp;Learn how to make choices using conditionals in programming.|
+| | | |
+|5|[Creating Functions]({{ site.baseurl }}/modules/05-functions)|&nbsp;&nbsp;&nbsp;&nbsp;Learn how to create and use functions. Learn also how to use a few high-order functions in Julia.|
+| | | |
+|6|[Scope of Variables]({{ site.baseurl }}/modules/06-scope-of-variables)|&nbsp;&nbsp;&nbsp;&nbsp;Scope of variables in Julia. Learn when a variable is global or local and what this means for your code.|
+| | | |
+|7|[Wrapping up]({{ site.baseurl }}/modules/07-wrapping-up)|&nbsp;&nbsp;&nbsp;&nbsp;Summarise what you learnt today and also where to find more information and tutorials for Julia.|   
 
 
 # Attribution
