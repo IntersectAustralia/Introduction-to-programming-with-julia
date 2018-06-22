@@ -9,23 +9,23 @@ show-in-nav-bar: true
 
 # Introduction
 
-Welcome to Intersect's Introduction to Programming with Julia course for researchers.
+Welcome to Intersect's Introduction to Programming with Julia course.
 
 ### Why Julia
 
-Julia is a high-level, high-performance dynamic programming language for numerical computing. In addition, the Julia developer community is contributing a number of external packages through Julia’s built-in package manager at a rapid pace. IJulia, a collaboration between the Jupyter and Julia communities, provides a powerful browser-based graphical notebook interface to Julia. The core of the Julia implementation is licensed under the MIT license. 
+Julia is a high-level, high-performance dynamic programming language. Note that there is also IJulia, a collaboration between the Jupyter and Julia communities, which provides a powerful browser-based graphical notebook interface to Julia. The Julia developer community is contributing a number of external packages through Julia’s built-in package manager at a rapid pace (more than 1700 available libraries for Julia). The core of the Julia implementation is licensed under the MIT license. 
 
 ### Performance
 
-Julia’s compiler combined with the language’s design allow it to approach and often match the performance of C. To get a sense of the relative performance of Julia compared to other languages that can or could be used for numerical and scientific computing, we’ve written a small set of micro-benchmarks in a variety of languages: C, Fortran, Julia, Python, Matlab/Octave, R, JavaScript, Java, Lua, Mathematica. 
+Julia’s compiler and design make it feasible to approach and often match the performance of the programming language C. Please see the image below to get a sense of the performance of Julia compared to a variety of programming languages, such as C, Python, R, Fortran, Matlab/Octave, JavaScript, Java, Lua, and Mathematica, that can or could be used for scientific analysis.
 
 ![Julia performance](images/julia_performance.png)
 
 ### Flexibility
 
-By design, Julia allows you to range from tight low-level loops, up to a high-level programming style, while sacrificing some performance, but gaining the ability to express complex algorithms easily. This continuous spectrum of programming levels is a hallmark of the Julia approach to programming and is very much an intentional feature of the language. 
+Julia allows you to range from tight low-level loops and conditionals, up to a high-level programming style. It may sacrifice some performance, but gain the ability to express complex algorithms easily. This continuous spectrum of programming levels is a hallmark of the Julia approach to programming and is very much an intentional feature of the Julia programming language. 
 
-The language can be built as a shared library, so users can combine Julia with their own C/Fortran code or proprietary third-party libraries. Furthermore, Julia makes it simple to call external functions in C and Fortran shared libraries, without writing any wrapper code or even recompiling existing code. You can try calling external library functions directly from Julia’s interactive prompt, getting immediate feedback.
+Furthermore, Julia can be built as a shared library, therefore users can combine Julia with their own C or Fortran code or proprietary third-party libraries. In Julia, it is also simple to call external functions in C and Fortran shared libraries, directly from Julia’s interactive prompt, without writing any wrapper code or even recompiling existing code. 
 
 ### Parallelisation
 
@@ -34,10 +34,7 @@ Julia does not impose any particular style of parallelism on the user. Instead, 
 
 # Prerequisites
 
-This course assumes Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
-
-Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
-{: .note}
+This course does not require any prior knowledge in programming. If you would like to explore other programming languages, please consider our training courses: [Introduction to Programming with R, Introduction to Programming with Python and Introduction to Programming with Matlab.](https://intersect.org.au/energy/training)
 
 # Outline
 
