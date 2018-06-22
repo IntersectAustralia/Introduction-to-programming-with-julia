@@ -20,7 +20,7 @@ Julia is a high-level, high-performance dynamic programming language. Note that 
 Julia’s compiler and design make it feasible to approach and often match the performance of the programming language C. Please see the image below to get a sense of the performance of Julia compared to a variety of programming languages, such as C, Python, R, Fortran, Matlab/Octave, JavaScript, Java, Lua, and Mathematica, that can or could be used for scientific analysis.
 
 ![Julia performance](images/julia_performance.png)
-^*^The picture was reproduced from [https://julialang.org/](https://julialang.org/)
+*The picture was reproduced from [https://julialang.org/](https://julialang.org/)
 
 ### Flexibility
 
