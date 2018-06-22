@@ -11,7 +11,7 @@ show-in-nav-bar: true
 
 Welcome to Intersect's Introduction to Programming with Julia course for researchers.
 
-### Why Julia?
+### Why Julia
 
 Julia is a high-level, high-performance dynamic programming language for numerical computing. In addition, the Julia developer community is contributing a number of external packages through Julia’s built-in package manager at a rapid pace. IJulia, a collaboration between the Jupyter and Julia communities, provides a powerful browser-based graphical notebook interface to Julia. The core of the Julia implementation is licensed under the MIT license. 
 
