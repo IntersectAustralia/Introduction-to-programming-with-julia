@@ -33,7 +33,7 @@ This course does not require any prior knowledge in programming. If you would li
 | | | |
 |6|[Scope of Variables]({{ site.baseurl }}/modules/06-scope-of-variables)|&nbsp;&nbsp;&nbsp;&nbsp;Scope of variables in Julia. Learn when a variable is global or local and what this means for your code.|
 | | | |
-|7|[Wrapping up]({{ site.baseurl }}/modules/07-wrapping-up)|&nbsp;&nbsp;&nbsp;&nbsp;Summarise what you learnt today and also where to find more information and tutorials for Julia.|   
+|7|[Wrapping up]({{ site.baseurl }}/modules/07-wrapping-up)|&nbsp;&nbsp;&nbsp;&nbsp;Summarise what you learnt today and also where to find more information and tutorials for Julia.| 
 
 
 # Attribution
