@@ -39,8 +39,6 @@ This course does not require any prior knowledge in programming. If you would li
 
 # Outline
 
-TODO: Move objectives to YML and auto-populate the table below..
-
 |Module number|&nbsp;&nbsp;&nbsp;&nbsp;Name|&nbsp;&nbsp;&nbsp;&nbsp;Learning Objectives|
 |:---: |:--- |:--- |
 | | | |
