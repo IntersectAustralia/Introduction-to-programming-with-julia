@@ -39,7 +39,7 @@ This course does not require any prior knowledge in programming. If you would li
 
 # Outline
 
-|Module number|&nbsp;&nbsp;&nbsp;&nbsp;Name|&nbsp;&nbsp;&nbsp;&nbsp;Learning Objectives|
+|Module number|Name|&nbsp;&nbsp;&nbsp;&nbsp;Learning Objectives|
 |:--- |:---: |---: |
 | | | |
 |0|[Setup]({{ site.baseurl }}/modules/00-setup)|&nbsp;&nbsp;&nbsp;&nbsp;Setup for this course and how to setup Julia environment on your local machine|
