@@ -11,10 +11,7 @@ The rendered site is here: [Introduction to Programming with Julia](https://inte
 
 # Prerequisites
 
-This course assumes Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
-
-Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
-{: .note}
+This course does not require any prior knowledge in programming. If you would like to explore other programming languages, please consider our training courses: [Introduction to Programming with R, Introduction to Programming with Python and Introduction to Programming with Matlab.](https://intersect.org.au/energy/training)
 
 
 # Outline
