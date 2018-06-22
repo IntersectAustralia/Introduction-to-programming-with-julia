@@ -44,9 +44,9 @@ TODO: Move objectives to YML and auto-populate the table below..
 |Module number|&nbsp;&nbsp;&nbsp;&nbsp;Name|&nbsp;&nbsp;&nbsp;&nbsp;Learning Objectives|
 |:---: |:--- |:--- |
 | | | |
-|0|&nbsp;&nbsp;&nbsp;&nbsp;[Setup]({{ site.baseurl }}/modules/00-setup)|&nbsp;&nbsp;&nbsp;&nbsp;How to setup the Julia environment|
+|0|&nbsp;&nbsp;&nbsp;&nbsp;[Setup]({{ site.baseurl }}/modules/00-setup)|&nbsp;&nbsp;&nbsp;&nbsp;Setup for this course and how to setup Julia environment on your local machine|
 | | | |
-|1|&nbsp;&nbsp;&nbsp;&nbsp;[Getting Started with Julia]({{ site.baseurl }}/modules/01-Getting-started-with-julia)|&nbsp;&nbsp;&nbsp;&nbsp;How to do basic operations, what is a variable, strings|
+|1|&nbsp;&nbsp;&nbsp;&nbsp;[Getting Started with Julia]({{ site.baseurl }}/modules/01-Getting-started-with-julia)|&nbsp;&nbsp;&nbsp;&nbsp;An introduction to basic elements of programming, such as variable types, data structures and useful built-in functions|
 | | | |
 |2|&nbsp;&nbsp;&nbsp;&nbsp;[Selecting Elements from an Array]({{ site.baseurl }}/modules/02-slicing)|&nbsp;&nbsp;&nbsp;&nbsp;Text needed|
 | | | |
