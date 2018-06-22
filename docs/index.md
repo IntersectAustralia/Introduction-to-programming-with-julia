@@ -46,7 +46,7 @@ This course does not require any prior knowledge in programming. If you would li
 | | | |
 |1|[Getting Started with Julia]({{ site.baseurl }}/modules/01-Getting-started-with-julia)|&nbsp;&nbsp;&nbsp;&nbsp;An introduction to basic elements of programming, such as variable types, data structures and useful built-in functions|
 | | | |
-|2|[Selecting Elements from an Array]({{ site.baseurl }}/modules/02-slicing)|&nbsp;&nbsp;&nbsp;&nbsp;Learn how to import packages (libraries) in Julia, how to load csv files, how to slice and select specific elements from an array, how to perform basic operations and stas using arrays, and how to start using plots.|
+|2|[Selecting Elements from an Array]({{ site.baseurl }}/modules/02-slicing)|&nbsp;&nbsp;&nbsp;&nbsp;Learn how to import packages (libraries) in Julia, how to load csv files, how to slice and select specific elements from an array, how to perform basic operations and stats using arrays, and how to start using plots.|
 | | | |
 |3|[Repeating Actions with Loops]({{ site.baseurl }}/modules/03-loops)|&nbsp;&nbsp;&nbsp;&nbsp;Learn how to use for and while loops for repeating actions in programming.|
 | | | |
