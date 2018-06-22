@@ -685,5 +685,5 @@ end
 ## Next
 In the next module we're going ........................
 
-[Go to Module 6 (Score of variables)]({{ site.baseurl }}/modules/06-scope-of-variables)
+[Go to Module 6 (Scope of variables)]({{ site.baseurl }}/modules/06-scope-of-variables)
 {: .next-link}
