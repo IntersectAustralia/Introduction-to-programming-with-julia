@@ -12,10 +12,11 @@ show-in-nav-bar: true
 {: .objective}
 
 
-In our last section, according to the inflammation study, there is something suspicious in our inflammation data by looking at the plots. In this section you will learn how you can use Python to automatically recognize the different features we saw, and take a different action for each, i.e. you will learn how to write code that runs only when certain conditions are true.
+According to the inflammation study, there is something suspicious in our inflammation data by looking at the plots. In this section you will learn how you can use Julia to automatically recognize the different features we saw, and take a different action for each, i.e. you will learn how to write code that runs only when certain conditions are true.
 
 # Conditionals
-Generic syntax for conditionals
+
+The generic syntax for conditionals in Julia is:
 ```matlab
 if condition1
   option 1
@@ -27,7 +28,7 @@ end
 ```
 {: .source}
 
-For example, let's check if the number is greater than 100 and print greater if the number is greater than 100 or print not greater if the number is less or equal to 100.
+For example, let's check if a number is greater than 100. If yes, print "greater", otherwise print "not greater".
 ```matlab
 number = 37
 
@@ -46,26 +47,22 @@ Done
 ```
 {: .output}
 
-Only the if part is compulsory to run a conditional
+Note that only the **if** part of the conditional is compulsory. The **elseif** and **else** parts are optional. 
 ```matlab
 number = 37
 
 if number > 100
     println("greater")
-else
-    println("not greater")
 end
 
 print("Done")
 ```
 {: .source}
 ```matlab
-before conditional...
-...after conditional
 ```
 {: .output}
 
-You can add additional conditions using the elseif part (you can add as many you want)
+You can add additional conditions using the **elseif** part (you can add as many you want). For example, let's check if a number is positive, negative or equal to zero:
 ```matlab
 number = -3
 
@@ -83,7 +80,7 @@ end
 ```
 {: .output}
 
-You can also combine conditions using the and (&) symbol, if you would like both conditions to be true
+You can also combine conditions using the and (&) symbol, indicating that the condition is only true if both parts are true:
 ```matlab
 number = 53
 
@@ -98,22 +95,25 @@ end
 both parts are true
 ```
 {: .output}
+In this example, we print "both parts are true" only if the number is greater than 0 and at the same time number is less than 100. 
 
-or you can combine conditions with the or (|) symbol (Shift+\ buttons in the keyboard), if you would like one or the other condition to be true
+You can also combine conditions using the or (|) symbol (Shift+\ buttons in the keyboard), if you would like one or the other condition to be true
 ```matlab
 number = 53
 
 if (number < 0) | (number > 100)
-    println("both parts are true")
+    println("at least one part is true")
 else
     println("at least one part is false")
 end
 ```
 {: .source}
 ```matlab
-at least one part is false
+at least one part is true
 ```
 {: .output}
+In this case, if one of the two conditions is true, then we will print "at least one part is true".
+
 
 > # Exercise
 > 
@@ -137,6 +137,7 @@ at least one part is false
 > 3. C
 > 4. B and C
 {: .inset}
+
 
 # Additional things with Julia Conditionals
 In Julia, we can write conditionals in a more compact way, such as
@@ -203,7 +204,7 @@ false
 ```
 {: .output}
 
-Similarly with the OR operator | and ||
+Similarly, we can do the same as before with the OR operator, i.e. you can use the single OR operator if you would like to evaluate the whole conditionals
 ```matlab
 true | (println("hi"); true)
 ```
@@ -213,7 +214,7 @@ hi
 true
 ```
 {: .output}
-However, if we use the double OR operator
+or you can use the double OR operator || for short-circuit evaluation
 ```matlab
 true || (println("hi"); true)
 ```
@@ -229,11 +230,12 @@ true
 {: .inset}
 
 # Inflammation datasets and conditionals
-Let's say that we know that there are some rules to understand if there is a problem in our inflammation dataset, and these rules are:
+
+Let's go back to the inflammation dataset to apply the conditional to find out if our dataset is OK for analysis or if there are any problems. We know that there is something suspicious in the inflammation data: 
 1. If the maximum inflammation at Day 1 is 0 and at Day 21 is 20
 2. If the minimum inflammation per Day is 0 throughout all the days
 
-To check if each of the inflammation datasets has any of these two problems, we can use conditionals. Let's start building our conditional step by step. Let's start with the first rule about the maximum
+To check if each of the inflammation datasets has any of these two problems, we can use conditionals. Let's start building our conditional step by step. Let's start with the first rule about the maximum inflammation:
 ```matlab
 data = readdlm("./data/inflammation-01.csv", ',');
 
@@ -242,7 +244,7 @@ if (maximum(data,1)'[1]==0) & (maximum(data,1)'[21]==20)
 end
 ```
 {: .source}
-Now let's add the second rule using the elseif command
+Now, let's add the second rule using the elseif command:
 ```matlab
 data = readdlm("./data/inflammation-01.csv", ',');
 
@@ -253,7 +255,7 @@ elseif sum(minimum(data,1)')==0
 end
 ```
 {: .source}
-and at the end let's add a statement if the dataset is ok. 
+and at the end let's add a statement if the dataset is OK:
 ```matlab
 data = readdlm("./data/inflammation-01.csv", ',');
 
@@ -266,15 +268,13 @@ else
 end
 ```
 {: .source}
-So if we run this conditional for the inflammation-01.csv, the output will be
+
+So, if we run this conditional for the *inflammation-01.csv* dataset, the output will be
 ```matlab
 Problem detected: Suspicious looking maximum!
 ```
 {: .output}
-which means that we have detected a problem in the first dataset. Try to run this conditional to the first three dataset to check if the other two datasets also have a problem.
+which means that we have detected a problem in the first dataset. Try to run this conditional on the first three dataset to check if the other two datasets also have a problem.
 
-
-## Next
-In the next module we're going ........................
 
 [Go to Module 5 (Functions)]({{ site.baseurl }}/modules/05-functions){: .next-link}
