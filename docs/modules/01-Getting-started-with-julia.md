@@ -50,25 +50,27 @@ or
 ```
 {: .source}
 
-To print the output of a command, we will use the **println** command and not **print** because the println("...") method prints the string "..." and moves the cursor to a new line (adds a new line to the end of output). The print("...") method instead prints just the string "...", but does not move the cursor to a new line.:
+To print the output of a command, we will use the **println** method and not the **print** one because the println("...") method prints the string "..." and moves the cursor to a new line (adds a new line at the end of the output). The print("...") method instead prints just the string "...", but does not move the cursor to a new line.
 ```python
 println("I am excited to learn Julia!")
 ```
 {: .source}
 
+
 # Variables
-Types of variables include:
+
+There are several types of variables in Programming, with the main types being:
 * Integer: Number without a decimal point, for example, 152
 * Floating point number: Precise number with decimal point, for example, 15.26 or 105.0
 * String: String of characters within quotes ("), for example, "This is a string"
 
-Assign variables using the equal sign
+To assign a new variable, you have to use the equal sign after the name of the variable. In the example below, we assign the number 42 to a new variable called my_answer. This new variable is an integer.
 ```python
 my_answer = 42
 ```
 {: .source}
 
-Check the type of a variable
+If you would like to check the type of variable you defined, you can use the typeof command:
 ```python
 typeof(my_answer)
 ```
@@ -78,7 +80,7 @@ Int64
 ```
 {: .output}
 
-Please note that if you would like to use comments, you need to use the # symbol in the beginning of the line or use #=  *text*  =# for multiple line comments
+Please note that to use comments in Julia, you need to use the # symbol in the beginning of the line or use #=  *text*  =# for multiple line comments.
 {: .note}
 
 > # Exercise
@@ -88,14 +90,16 @@ Please note that if you would like to use comments, you need to use the # symbol
 > B) Convert days to a floating point number
 {: .inset}
 
-# Strings
-As we mentioned before, you need to use quotes "*string*" or triple quotes """*string*""" to define a string. 
-One difference between the single vs triple quotes is that, in the latter case, you can use quotation marks within your string.
 
-Be careful! You cannot use single quotation marks (') for strings in Julia.
+# Strings
+
+As we mentioned before, you need to use quotes "*string*" or triple quotes """*string*""" to define a string. 
+The difference between the single vs triple quotes is that, in the latter, you can use quotation marks within your string.
+
+Be careful! You cannot use single quotation marks (') for strings in Julia!
 {: .note}
 
-This is an example of a string:
+Below is an example of a string:
 ```python
 "This is my first string."
 ```
@@ -104,7 +108,7 @@ This is an example of a string:
 "This is my first string."
 ```
 {: .output}
-or
+Another example using the triple quotes:
 ```python
 """This is a string with "special" characters, such as !-@"""
 ```
@@ -114,7 +118,7 @@ or
 ```
 {: .output}
 
-This is a wrong syntax for a string in Julia
+The following example is using a wrong syntax for a string in Julia:
 ```python
 'This is a wrong string'
 ```
@@ -124,8 +128,10 @@ syntax: Invalid character literal
 ```
 {: .output}
 
+
 ## Print strings and other types of variables
 
+Let's explore a few more 
 ```python
 name = "John"
 age = 25
