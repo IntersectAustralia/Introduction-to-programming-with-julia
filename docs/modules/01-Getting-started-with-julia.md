@@ -64,13 +64,13 @@ There are several types of variables in programming, with the main types being:
 * Floating point number: Precise number with decimal point, for example, 15.26 or 105.0
 * String: String of characters within quotes ("), for example, "This is a string"
 
-To assign a new variable, you have to use the equal sign after the name of the variable. In the example below, we assign the number 42 to a new variable called my_answer. This new variable is an integer.
+To assign a new variable, you have to use the equal sign after the name of the variable. In the example below, we assign the number 42 to a new variable called *my_answer*. This new variable is an integer.
 ```python
 my_answer = 42
 ```
 {: .source}
 
-If you would like to check the type of the variable you just defined, you can use the typeof command:
+If you would like to check the type of the variable you just defined, you can use the **typeof** command:
 ```python
 typeof(my_answer)
 ```
@@ -80,7 +80,7 @@ Int64
 ```
 {: .output}
 
-Please note that to use comments in Julia, you need to use the # symbol in the beginning of the line or use #=  *text*  =# for multiple line comments.
+Please note that you can add comments in Julia by using the # symbol in the beginning of the line or by using #=  *text*  =# for multiple line comments.
 {: .note}
 
 > # Exercise
