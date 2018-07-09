@@ -12,11 +12,11 @@ show-in-nav-bar: true
 > - Useful built-in functions
 {: .objective}
 
-In this first module, you will learn the basics of programming. We will start with basic operations in Julia. Then, you will learn about variables and the different types of variables in programming. This module also covers the differnt data structures in Julia, such as tuples, dictionaries and arrays, and we will finish this module with useful built-in  
+In the first module, you will learn the basic concepts of programming. We will start with basic operations in Julia. Then, you will learn about variables and the different types of variables in programming. This module also covers the different data structures in Julia, such as tuples, dictionaries and arrays, and and also some useful built-in functions.
 
 # Basics
 
-Excecute basic operations
+Below is an example of the basic operations in Julia, such as addition, multiplication, division, etc.
 ```python
 1+1
 2-3
@@ -27,19 +27,19 @@ Excecute basic operations
 ```
 {: .source}
 
-Suppress the output using the semicolon
+If you would like to suppress the output, you can use the semicolon at the end of the command:
 ```python
 2+2;
 ```
 {: .source}
 
-You can find some help information for the functions using the question mark
+If you don't know what a particular function does and you would like to check its documentation, you can use the question mark as below:
 ```python
 ?println
 ```
 {: .source}
 
-In Julia, you are able to use Unix Shell commands by using the ; in front of the command
+In Julia, you are also able to use Unix Shell commands by using the ; in front of the command:
 ```python
 ;pwd
 ```
@@ -50,7 +50,7 @@ or
 ```
 {: .source}
 
-To print something in Julia, we will use println and not print because the println("...") method prints the string "..." and moves the cursor to a new line (adds a new line to the end of output). The print("...") method instead prints just the string "...", but does not move the cursor to a new line.:
+To print the output of a command, we will use the **println** command and not **print** because the println("...") method prints the string "..." and moves the cursor to a new line (adds a new line to the end of output). The print("...") method instead prints just the string "...", but does not move the cursor to a new line.:
 ```python
 println("I am excited to learn Julia!")
 ```
