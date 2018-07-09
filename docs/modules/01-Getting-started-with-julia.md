@@ -450,8 +450,9 @@ There are several built-in functions in Julia that are very useful and practical
 
 These functions are all single-argument, except for **atan2**, which gives the angle in radians between the x-axis and the point specified by its arguments, interpreted as x and y coordinates. Additionally, **sinpi(x)** and **cospi(x)** are provided for more accurate computations of sin(pi*x) and cos(pi*x), respectively.
 
-|sin|cos|tan|cot|sec|csc|
+| | | | | | |
 |:--- |:--- |:--- |:--- |:--- |:--- |
+|sin|cos|tan|cot|sec|csc|
 |sinh|cosh|tanh|coth|sech|csch|
 |asin|acos|atan|acot|asec|acsc|
 |asinh|acosh|atanh|acoth|asech|acsch|
@@ -459,8 +460,9 @@ These functions are all single-argument, except for **atan2**, which gives the a
 
 To compute trigonometric functions with degrees instead of radians, suffix the function with d, as shown below. For example, sind(x) computes the sin of x with x specified in degrees. The complete list of trigonometric functions with degree variants is:
 
-|sind|cosd|tand|cotd|secd|cscd|
+| | | | | | |
 |:--- |:--- |:--- |:--- |:--- |:--- |
+|sind|cosd|tand|cotd|secd|cscd|
 |asind|acosd|atand|acotd|asecd|acscd|
 
 
