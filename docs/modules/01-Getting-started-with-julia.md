@@ -59,7 +59,7 @@ println("I am excited to learn Julia!")
 
 # Variables
 
-There are several types of variables in Programming, with the main types being:
+There are several types of variables in programming, with the main types being:
 * Integer: Number without a decimal point, for example, 152
 * Floating point number: Precise number with decimal point, for example, 15.26 or 105.0
 * String: String of characters within quotes ("), for example, "This is a string"
