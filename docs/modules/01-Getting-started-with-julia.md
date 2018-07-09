@@ -70,7 +70,7 @@ my_answer = 42
 ```
 {: .source}
 
-If you would like to check the type of variable you defined, you can use the typeof command:
+If you would like to check the type of the variable you just defined, you can use the typeof command:
 ```python
 typeof(my_answer)
 ```
