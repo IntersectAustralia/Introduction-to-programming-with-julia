@@ -16,7 +16,7 @@ In the first module, you will learn the basic concepts of programming. We will s
 
 # Basics
 
-Below is an example of the basic operations in Julia, such as addition, multiplication, division, etc.
+Below is an example of basic operations in Julia, such as addition, multiplication, division, etc.
 ```python
 1+1
 2-3
