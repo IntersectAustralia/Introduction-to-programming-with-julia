@@ -85,9 +85,9 @@ Please note that you can add comments in Julia by using the # symbol in the begi
 
 > # Exercise
 >
-> A) Assign the number 365 to a variable named days. What is the type of this variable?
+> A) Assign the number 365 to a variable called *days*. What is the type of this variable?
 >
-> B) Convert days to a floating point number
+> B) Convert *days* to a floating point number
 {: .inset}
 
 
@@ -96,7 +96,7 @@ Please note that you can add comments in Julia by using the # symbol in the begi
 As we mentioned before, you need to use quotes "*string*" or triple quotes """*string*""" to define a string. 
 The difference between the single vs triple quotes is that, in the latter, you can use quotation marks within your string.
 
-Be careful! You cannot use single quotation marks (') for strings in Julia!
+Be careful! You cannot use single quotation marks (') to define strings in Julia!
 {: .note}
 
 Below is an example of a string:
@@ -118,7 +118,7 @@ Another example using the triple quotes:
 ```
 {: .output}
 
-The following example is using a wrong syntax for a string in Julia:
+The following example will give you an error as it uses a wrong syntax to define a string in Julia:
 ```python
 'This is a wrong string'
 ```
@@ -131,7 +131,7 @@ syntax: Invalid character literal
 
 ## Print strings and other types of variables
 
-Let's explore more things about printing strings. In the following example, we create two new variables called *name* and *age*, which is a string and an integer, respectively. If we would like to print a string including the values of these two variables, we need to use the $ symbol before the variable name. For example, if we add $name within the string, we will print the value of the *name* variable. In this example, we print two strings with the values of the two variables indluded in the outputs: 
+In this section, you will learn more about printing strings including the values of variables. In the following example, we create two variables called *name* and *age*, which are a string and an integer, respectively. If you would like to print a string including the values of these two variables, you need to use the $ symbol in the variable name. For example, if you add *$name* within the string, you will print the value of the *name* variable. In this example, we print two strings with the values of the two variables indluded in the outputs: 
 ```python
 name = "John"
 age = 25
@@ -147,7 +147,7 @@ You are 25 years old
 ```
 {: .output}
 
-Another example printing the values of both variables in a single command:
+Here is another example showing how to print the values of both variables in a single command:
 ```python
 println("Hello $name. You are $age years old")
 ```
@@ -157,7 +157,7 @@ Hello John. You are 25 years old
 ```
 {: .output}
 
-You can also do calculations within the println command. Note that the calculation should be within parenthesis after the $ symbol:
+You can also do calculations within the **println** command. Note that the calculation should be within parenthesis after the $ symbol:
 ```python
 println("You are $(2*age+10) years old")
 ```
@@ -202,16 +202,17 @@ s1*s2
 
 # Data Structures
 
-Once we start working with many pieces of data at once, it will be convenient for us to store data in structures like arrays or dictionaries (rather than just relying on variables).
+Once we start working with many pieces of data at once, it will be convenient for us to store data in structures like arrays or dictionaries rather than just relying on variables.
 
-The types of data structures that we are going to cover here are:
+The types of data structures covered in this section are:
 * Tuples
 * Dictionaries
 * Arrays
 
 
 ## Tuples
-We can create a tuple by enclosing an ordered collection of elements in ( ). For example, we can create a tuple called animals including three elements, namely "dogs", "cats" and "penguins".
+
+You can create a tuple by enclosing an ordered collection of elements in ( ). In this example, we create a tuple called *animals* including three elements, namely "dogs", "cats" and "penguins".
 ```python
 animals = ("dogs", "cats", "penguins")
 ```
@@ -221,7 +222,7 @@ animals = ("dogs", "cats", "penguins")
 ```
 {: .output}
 
-We can index into the tuple using the square brackets [ ]:
+You can index into the tuple using the square brackets [ ]:
 ```python
 animals[1]
 ```
@@ -231,7 +232,7 @@ animals[1]
 ```
 {: .output}
 
-But tupples are immutable, which means that we can't update its elements:
+But tuples are immutable, which means that you can't update its elements:
 ```python
 animals[1] = "lions"
 ```
@@ -243,9 +244,10 @@ MethodError: no method matching setindex!(::Tuple{String,String,String}, ::Strin
 
 
 ## Dictionaries
-If we have sets of data related to one another, we may choose to store that data in a dictionary. We can create a dictionary using the Dict() function, which we can initialise as an empty dictionary or one storing key, value pairs.
 
-The syntax of a dictionary is: Dict(key1 => value1, key2 => value2, ...).
+If you have sets of data related to one another, you may choose to store that data in a dictionary. You can create a dictionary using the Dict() function, which you can initialise as an empty dictionary or storing *key* and *value* pairs.
+
+The syntax to create a dictionary is: Dict(key1 => value1, key2 => value2, ...).
 
 Here is an example of a dictionary. We create a dictionary called *phonebook*, with the keys being the names, and the values being the phone numbers. 
 ```python
@@ -259,7 +261,7 @@ Dict{String,String} with 2 entries:
 ```
 {: .output}
 
-In this example, each name and number is a "key" and "value" pair. We can get Jenny's number (a value) using the associated key:
+In this example, each name and number is a *"key"* and *"value"* pair. You can get Jenny's number (the *value*) using the associated *key*:
 ```python
 phonebook["Jenny"]
 ```
@@ -269,7 +271,7 @@ phonebook["Jenny"]
 ```
 {: .output}
 
-We can add another entry to this dictionary using the following syntax:
+You can add another entry to this dictionary using the following syntax:
 ```python
 phonebook["Isabel"] = "736-283";
 phonebook
@@ -283,7 +285,7 @@ Dict{String,String} with 3 entries:
 ```
 {: .output}
 
-We can also delete entries from our dictionary using **pop!**
+You can also delete entries from the dictionary using **pop!**
 ```python
 pop!(phonebook, "John");
 phonebook
@@ -296,7 +298,7 @@ Dict{String,String} with 2 entries:
 ```
 {: .output}
 
-Unlike tuples and arrays, dictionaries are not ordered. So, we can't index into them using numbers (except if the keys are these numbers). If we try to access *phonebook[1]*, we will get an error saying that key 1 has not found. 
+Unlike tuples and arrays, dictionaries are not ordered. So, you can't index into them using numbers (except if the keys are these numbers). If you try to access *phonebook[1]*, you will get an error saying that key 1 has not found. 
 ```python
 phonebook[1]
 ```
@@ -317,7 +319,8 @@ KeyError: key 1 not found
 
 
 ## Arrays
-Unlike tuples, arrays are mutable, and unlike dictionaries, arrays contain ordered collections. We can create an array by enclosing this collection in [ ].
+
+Unlike tuples, arrays are mutable, and unlike dictionaries, arrays contain ordered collections. You can create an array by enclosing this collection in [ ].
 
 The syntax to create an array is: [item1, item2, ...].
 
@@ -338,7 +341,7 @@ fibonacci = [1,1,2,3,5,8,13]
 ```
 {: .output}
 
-The elements in an array can be a mix of variable types. In the example below, we have an array including integers and strings:
+The elements in an array can be a mix of variable types. In the example below, we create an array that includes integers and strings:
 ```python
 mix = [1, 2, 3, "Jenny", "John"]
 ```
@@ -363,7 +366,7 @@ mix[3]
 ```
 {: .output}
 
-We can also update the value of an element:
+You are also able to update the value of an element:
 ```python
 mix[3] = "Jack"
 mix
@@ -379,7 +382,7 @@ mix
 ```
 {: .output}
 
-We are also able to add more elements in the array using **push!**
+You can also add more elements in the array using **push!**
 ```python
 push!(fibonacci, 21)
 fibonacci
@@ -397,8 +400,7 @@ fibonacci
  21
 ```
 {: .output}
-
-We can remove an element from an array using **pop!** similar to dictionaries:
+and you can remove an element from an array using **pop!** (similar to dictionaries):
 ```python
 pop!(fibonacci)
 fibonacci
@@ -417,15 +419,17 @@ fibonacci
 
 > # Exercise
 >
-> Create an array called a_array with the following code:
+> Create an array called *a_array* with the following code:
 >
 > a_array = [1,2,3]
 >
 > Add the number 4 to the end of this array and then remove it
 {: .inset}
 
+
 # Useful functions in Julia
-There are several built-in functions in Julia that are very useful and practical for our coding. Here is a list of some useful function in Julia for basic operations.
+
+There are several built-in functions in Julia that are very useful and practical for our coding. Here is a list of some useful built-in function in Julia for basic operations.
 
 |Function|&nbsp;&nbsp;&nbsp;&nbsp;Description|
 |:--- |:--- |
@@ -441,7 +445,9 @@ There are several built-in functions in Julia that are very useful and practical
 |log10(x)|&nbsp;&nbsp;&nbsp;&nbsp;base 10 logarithm of x|
 |A'|&nbsp;&nbsp;&nbsp;&nbsp;transpose of matrix/array A|
 
+
 ## Trigonometric and hyperbolic functions
+
 These functions are all single-argument, except for **atan2**, which gives the angle in radians between the x-axis and the point specified by its arguments, interpreted as x and y coordinates. Additionally, **sinpi(x)** and **cospi(x)** are provided for more accurate computations of sin(pi*x) and cos(pi*x), respectively.
 
 sin    cos    tan    cot    sec    csc
