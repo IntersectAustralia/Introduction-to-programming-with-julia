@@ -11,7 +11,8 @@ show-in-nav-bar: true
 > - ...
 {: .objective}
 
-Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
+
+In our last section, according to the inflammation study, there is something suspicious in our inflammation data by looking at the plots. In this section you will learn how you can use Python to automatically recognize the different features we saw, and take a different action for each, i.e. you will learn how to write code that runs only when certain conditions are true.
 
 # Conditionals
 Generic syntax for conditionals
