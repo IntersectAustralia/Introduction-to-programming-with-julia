@@ -12,7 +12,7 @@ show-in-nav-bar: true
 > - Useful built-in functions
 {: .objective}
 
-In the first module, you will learn the basic concepts of programming. We will start with basic operations in Julia. Then, you will learn about variables and the different types of variables in programming. This module also covers the different data structures in Julia, such as tuples, dictionaries and arrays, and and also some useful built-in functions.
+In the first module, you will learn the basic concepts of programming. We will start with basic operations in Julia, followed by the different types of variables in programming. This module also covers the different data structures in Julia, such as tuples, dictionaries and arrays, and also some useful built-in functions.
 
 # Basics
 
