@@ -39,7 +39,7 @@ If you don't know what a particular function does and you would like to check it
 ```
 {: .source}
 
-In Julia, you are also able to use Unix Shell commands by using the ; in front of the command:
+In Julia, you can also use Unix Shell commands by using the ; in front of the command:
 ```python
 ;pwd
 ```
