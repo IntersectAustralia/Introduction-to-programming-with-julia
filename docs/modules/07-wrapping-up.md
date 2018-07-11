@@ -22,4 +22,4 @@ If you would like to explore more about the Julia programming language, there ar
 [Go to Home]({{ site.baseurl }}/index)
 {: .next-link}
 
-![Julia image](./../docs/images/Julia_intersect.png)
+![Julia image](./../images/Julia_intersect.png)
