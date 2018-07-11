@@ -359,14 +359,14 @@ v
 # Higher order functions
 
 ## **map** function
-The map function is a "higher-order" function in Julia that takes a function as one of its input arguments. map then applies that function to every element of the data structure you pass it. For example, executing 
+The **map** function is a "higher-order" function in Julia that takes a function as one of its input arguments. **map** then applies that function to every element of the data structure you pass it. For example, executing 
 ```matlab
 map(f, [1, 2, 3])
 ```
 {: .source}
-will give you an output array where the function f has been applied to all elements of [1,2,3], i.e. [f(1),f(2),f(3)].
+will give you an output array where the function **f** has been applied to all elements of [1,2,3], i.e. [f(1),f(2),f(3)].
 
-Here is an example. We have a function that calculates the cube of a number and we would like to apply this calculation to a list of numbers. We are going to use map to do that
+Here is an example. We have a function that calculates the cube of a number and we would like to apply this calculation to a list of numbers. We are going to use the **map** function to do that:
 ```matlab
 map(x->x^3, [1,4,7])
 ```
@@ -380,24 +380,24 @@ map(x->x^3, [1,4,7])
 {: .output}
 
 ## **broadcast** function
-The broadcast function is another "higher-order" function like map. broadcast is a generilisation of map, so it can do every thing map can do and more. The syntax for calling broadcast is teh same as for calling map
+The **broadcast** function is another "higher-order" function like **map**. **broadcast** is a generilisation of **map**, so it can do every thing **map** can do and more. The syntax for calling broadcast is the same as for calling **map**
 ```matlab
 broadcast(function_name, [item1, item2, item3])
 ```
 {: .source}
 
-Some syntactic sugar for calling broadcast is to place a dot (.) between the name of the function you want to broadcast and its input arguments. For example
+Some syntactic sugar for calling **broadcast** is to place a dot (.) between the name of the function you want to broadcast and its input arguments. For example
 ```matlab
 broadcast(function_name, [item1, item2, item3])
 ```
 {: .source}
 is the same as
 ```matlab
-function_name.([1, 2, 3])
+function_name.([item1, item2, item3])
 ```
 {: .source}
 
-Let's do an example to better understand the broadcast function. 
+Let's do an example to better understand the **broadcast** function. 
 ```matlab
 broadcast(x->x^3, [1,4,7])
 ```
@@ -410,9 +410,9 @@ broadcast(x->x^3, [1,4,7])
 ```
 {: .output}
 
-We can do the same now using the dot after the calling the function
+We can do the same now using the dot after calling the function
 ```matlab
-f(x) =x^3
+f(x) = x^3
 f.([1,4,7])
 ```
 {: .source}
@@ -437,7 +437,7 @@ A = [i + 3*j for j in 0:2, i in 1:3]
 ```
 {: .output}
 
-If we run the f function we created before on the A array, we will have
+If we run the *f* function on the A array,
 ```matlab
 f(A)
 ```
@@ -449,9 +449,9 @@ f(A)
  1656  2034  2412
 ```
 {: .output}
-so we will have the cube of all the numbers of the A array.
+we will have the cube of all the numbers of the A array.
 
-Now let's try to apply the broadcast function on f using the dot syntax. This syntax for broadcasting allows us to write relatively complex compound elementwise expressions in a way that looks natural/closer to mathematical notation.
+Now let's try to apply the **broadcast** function on *f* using the dot syntax. This syntax for broadcasting allows us to write relatively complex compound elementwise expressions in a way that looks natural/closer to mathematical notation.
 ```matlab
 f.(A)
 ```
@@ -476,18 +476,18 @@ A .+ 2 .* f.(A) ./ A
 ```
 {: .output}
 
+
 # Function documentation
-The basic syntax is very simple: any string appearing at the top-level right before an object (function, macro, type or instance) will be interpreted as documenting it (these are called docstrings). Here is a very simple example:
+The function documentation syntax is very simple: any string appearing at the top-level right before an object (function, macro, type or instance) will be interpreted as documentation (these are called docstrings). Here is an example:
 ```matlab
 "This is a sample of a function documentation"
 function my_func(a,b)
    println("a is:",a," while b is:",b) 
-    
 end
 ```
 {: .source}
 
-Let's check the documentation of my_func
+Let's check the documentation of *my_func* using the question mark
 ```matlab
 ?my_func
 ```
@@ -500,7 +500,7 @@ This is a sample of a function documentation
 ```
 {: .output}
 
-Documentation is interpreted as Markdown, so you can use indentation and code fences to delimit code examples from text. Technically, any object can be associated with any other as metadata; Markdown happens to be the default, but one can construct other string macros and pass them to the @doc macro just as well.
+Documentation is interpreted as Markdown, so you can use indentation and code fences to delimit code examples from text. Technically, any object can be associated with any other as metadata. Markdown happens to be the default, but one can construct other string macros and pass them to the @doc macro as well.
 
 Here is a more complex example, still using Markdown:
 ```matlab
@@ -514,7 +514,6 @@ This is a more complex function documentation:
 """
 function my_func(a,b)
    println("a is:",a," while b is:",b) 
-    
 end
 ```
 {: .source}
@@ -525,11 +524,12 @@ check the documentation of my_func
 ```
 {: .source}
 
-Please find in the link below some tips when writing documentation:
+Please find more tips for writing documentation in this link:
 https://docs.julialang.org/en/stable/manual/documentation/#Documentation-1
 
 
 # Readable functions
+In programming, it is really important to use names for variables and functions that are descriptive and meaningful. Otherwise, if you check your scripts after a few months, or if you share your scripts with your colleagues, it will be hard to read them and you or your colleagues will need to spend hours understanding what you are doing in the scripts. Here is an example of a non-readable function. Please spend one minute reading this function and try to understand what the function does:
 ```matlab
 function s(p)
     a=0
@@ -550,7 +550,7 @@ end
 ```
 {: .source}
 
-compared with 
+For those who couldn't understand what the previous functions does, please have a look in the same function but now using more descriptive and meaningful names: 
 ```matlab
 function std_dev(sample)
     sample_sum=0
@@ -571,27 +571,13 @@ end
 ```
 {: .source}
 
-Let's test the functions
-```matlab
-listmy=[1,5,6,3,4]
-
-
-println("s function result: ", s(listmy))
-println("std_dev function result: ",std(listmy))
-println("std built-in function result: ",std_dev(listmy))
-```
-{: .source}
-```matlab
-s function result: 1.9235384061671346
-std_dev function result: 1.9235384061671346
-std built-in function result: 1.9235384061671346
-```
-{: .output}
+Is it easier to read the first or the second function?
 
 
 # Inflammation datasets and functions
-In the previous modules, we learnt how to run the analysis for multiple datasets and how to use conditionals to detect problems in the inflammation datasets. Now let's go one step further and implement some functions to our code. We are going to create a function called analyze, which takes the filename as an argument and produces the plot with the three subfigures for the average, maximum and minimum inflammation per day, as well as another function called detect_problems for the detection of problems, which also takes the filename as an argument.
-Let's start with the analyze function first
+In the previous modules, we learnt how to run the analysis for multiple datasets and how to use conditionals to detect problems in our datasets. Now let's go one step further and implement some functions to our scipt. We are going to create a function called *analyze*, which takes the filename as an input argument and produces the plot with the three subfigures for the average, maximum and minimum inflammation per day. Then we will create another function called *detect_problems* to detect if there are any problems in the inflammation dataset, which also takes the filename as an input argument.
+
+Let's define the *analyze* function first:
 ```matlab
 function analyze(filename)
     
@@ -616,7 +602,8 @@ end
 analyze (generic function with 1 method)
 ```
 {: .output}
-And then the detect_problems function will be 
+
+Now declare the *detect_problems* function, which will be:
 ```matlab
 function detect_problems(filename)
     
@@ -638,7 +625,7 @@ detect_problems (generic function with 1 method)
 ```
 {: .output}
 
-Let's check if the functions are working correctly
+Let's check if the functions are working correctly using the first inflammation dataset:
 ```matlab
 analyze("./data/inflammation-01.csv")
 ```
@@ -646,7 +633,7 @@ analyze("./data/inflammation-01.csv")
 
 ![functions image1](../images/julia8.png)
 
-And let's check the detect_problems function for the third dataset as well
+And let's check the *detect_problems* function for the third dataset as well
 ```matlab
 detect_problems("./data/inflammation-03.csv")
 ```
@@ -655,8 +642,7 @@ detect_problems("./data/inflammation-03.csv")
 Minimum add up to zero!
 ```
 {: .output}
-
-If we combine all the above and everything we have done so far, our analysis would be 
+So both functions seem to work correctly. Now, we will try to combine everything we learnt until now to analyse the first three inflammation dataset using the concepts of loops, conditionals and functions:
 ```matlab
 using Plots
 using Glob
@@ -673,9 +659,6 @@ end
 ![functions image2](../images/julia9.png)
 
 
-
-## Next
-In the next module we're going ........................
 
 [Go to Module 6 (Scope of variables)]({{ site.baseurl }}/modules/06-scope-of-variables)
 {: .next-link}
