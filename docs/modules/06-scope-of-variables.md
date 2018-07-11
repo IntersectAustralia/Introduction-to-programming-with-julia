@@ -12,11 +12,11 @@ show-in-nav-bar: true
 {: .objective}
 
 # Scope of variables
-Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
+Before we finish with this course, it would be good to learn also about another concept in programming, the scope of variables.
 
-The scope of a variable is the region of code within which a variable is visible. Variable scoping helps avoid variable naming conflicts. The concept is intuitive: two functions can both have arguments called x without the two x's referring to the same thing. Similarly there are many other cases where different blocks of code can use the same name without referring to the same thing. The rules for when the same variable name does or doesn't refer to the same thing are called scope rules; this section spells them out in detail.
+The scope of a variable is the region of code within which a variable is visible. Variable scoping helps avoid variable naming conflicts. The concept is intuitive: two functions can both have arguments called x without the two x's referring to the same thing. Similarly there are many other cases where different blocks of code can use the same name without referring to the same thing. The rules for when the same variable name does or doesn't refer to the same thing are called scope rules.
 
-Certain constructs in the language introduce scope blocks, which are regions of code that are eligible to be the scope of some set of variables. The scope of a variable cannot be an arbitrary set of source lines; instead, it will always line up with one of these blocks. There are two main types of scopes in Julia, global scope and local scope, the latter can be nested. The constructs introducing scope blocks are:
+Certain constructs in the language introduce scope blocks, which are regions of code that are eligible to be the scope of some set of variables. The scope of a variable cannot be an arbitrary set of source lines. Instead, it will always line up with one of these blocks. There are two main types of scopes in Julia, **global** scope and **local** scope, the latter can be nested. The scope blocks are:
 
 - Global Scope
 - Local Scope: Soft Local Scope
@@ -26,9 +26,9 @@ Certain constructs in the language introduce scope blocks, which are regions of 
 Each module introduces a new global scope, separate from the global scope of all other modules; there is no all-encompassing global scope. Modules can introduce variables of other modules into their scope through the using or import statements or through qualified access using the dot-notation, i.e. each module is a so-called namespace. Note that variable bindings can only be changed within their global scope and not from an outside module.
 
 # Local Scope 
-A new local scope is introduced by most code-blocks, see above table for a complete list. A local scope usually inherits all the variables from its parent scope, both for reading and writing. There are two subtypes of local scopes, hard and soft, with slightly different rules concerning what variables are inherited. Unlike global scopes, local scopes are not namespaces, thus variables in an inner scope cannot be retrieved from the parent scope through some sort of qualified access.
+A new local scope is introduced by most code-blocks. A local scope usually inherits all the variables from its parent scope, both for reading and writing. There are two subtypes of local scopes, hard and soft, with slightly different rules concerning what variables are inherited. Unlike global scopes, local scopes are not namespaces, thus variables in an inner scope cannot be retrieved from the parent scope through some sort of qualified access.
 
-The following rules and examples pertain to both hard and soft local scopes. A newly introduced variable in a local scope does not back-propagate to its parent scope. For example, here the z is not introduced into the top-level scope:
+The following rules and examples pertain to both hard and soft local scopes. A newly introduced variable in a local scope does not back-propagate to its parent scope. For example, here the *z* variable is not introduced into the top-level scope:
 ```matlab
 for i = 1:10
   z = i
@@ -44,7 +44,7 @@ ERROR: UndefVarError: z not defined
 
 (Note, in this and all following examples it is assumed that their top-level is a global scope with a clean workspace, for instance a newly started REPL.)
 
-Inside a local scope a variable can be forced to be a local variable using the local keyword:
+Inside a local scope, a variable can be forced to be a local variable using the **local** keyword:
 ```matlab
 x=0;
 
@@ -61,7 +61,7 @@ x
 ```
 {: .output}
 
-Inside a local scope a new global variable can be defined using the keyword global:
+Inside a local scope, a new global variable can be defined using the keyword **global**:
 ```matlab
 for i = 1:10
   global z
@@ -77,7 +77,7 @@ z
 {: .output}
 
 # Soft Local Scope
-In a soft local scope, all variables are inherited from its parent scope unless a variable is specifically marked with the keyword local.
+In a soft local scope, all variables are inherited from its parent scope unless a variable is specifically marked with the keyword local. 
 
 Soft local scopes are introduced by for-loops, while-loops, comprehensions, try-catch-finally-blocks, and let-blocks. There are some extra rules for Let Blocks and for For Loops and Comprehensions.
 
@@ -96,7 +96,8 @@ x
 12
 ```
 {: .output}
-Within soft scopes, the global keyword is never necessary, although allowed. The only case when it would change the semantics is (currently) a syntax error:
+Within soft scopes, the global keyword is never necessary, although allowed. 
+
 
 # Hard Local Scope
 Hard local scopes are introduced by function definitions (in all their forms), struct type definition blocks, and macro-definitions.
@@ -115,7 +116,7 @@ function foo()
 end;
 ```
 {: .source}
-text text
+
 ```matlab
 foo()
 ```
@@ -124,6 +125,7 @@ foo()
 4
 ```
 {: .output}
+
 while
 ```matlab
 x
@@ -170,6 +172,7 @@ baz()
 22
 ```
 {: .output}
+
 while 
 ```matlab
 x,y
@@ -180,7 +183,7 @@ x,y
 ```
 {: .output}
 
-The distinction between inheriting global and local variables for assignment can lead to some slight differences between functions defined in local vs. global scopes. Consider the modification of the last example by moving bar to the global scope:
+The distinction between inheriting global and local variables for assignment can lead to some slight differences between functions defined in local vs global scopes. Consider the modification of the last example by moving bar to the global scope:
 ```matlab
 x,y = 1,2;
 
@@ -210,11 +213,8 @@ x, y
 (1, 2)
 ```
 {: .output}
+Note that above subtlety does not pertain to type and macro definitions as they can only appear at the global scope. There are special scoping rules concerning the evaluation of default and keyword function arguments.
 
-Note that above subtlety does not pertain to type and macro definitions as they can only appear at the global scope. There are special scoping rules concerning the evaluation of default and keyword function arguments which are described in the Function section.
-
-## Next
-In the next module we're going ........................
 
 [Go to Module 7 (Wrapping up)]({{ site.baseurl }}/modules/07-wrapping-up)
 {: .next-link}
