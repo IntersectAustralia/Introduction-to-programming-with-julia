@@ -12,11 +12,9 @@ show-in-nav-bar: true
 {: .objective}
 
 # Functions
-Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
+At this point, we have written code to draw some interesting features in our inflammation data, loop over all our data files to quickly draw these plots for each of them, and have Julia make decisions based on what it sees in our data. But, our code is getting pretty long and complicated. What if we had thousands of datasets, and didn’t want to generate a figure for every single one? Commenting out the figure-drawing code is a nuisance. Also, what if we want to use that code again, on a different dataset or at a different point in our program? Cutting and pasting it is going to make our code get very long and very repetitive, very quickly. We’d like a way to package our code so that it is easier to reuse, and Julia provides this by letting us define things called ‘functions’ — a shorthand way of re-executing longer pieces of code. 
 
-
-
-The generic syntax to create a function in Julia is:
+Below you can see the generic syntax to create a function in Julia:
 ```matlab
 function function_name(argument1, argument2, ...)
   do things
@@ -24,7 +22,7 @@ end
 ```
 {: .source}
 
-Let's create a function that converts temperature from Fahrenheit to Celsius
+Let’s start by creating a function called *fahr_to_celsius* that converts temperature from Fahrenheit to Celsius:
 ```matlab
 function fahr_to_celsius(temperature)
    (temperature-32)*(5/9) 
@@ -32,7 +30,7 @@ end
 ```
 {: .source}
 
-Let's now convert a temperature of 32 Fahrenheit to Celsius
+Let's now test our function by converting a temperature of 32 Fahrenheit to Celsius
 ```matlab
 println("Freezing point of water: ", fahr_to_celsius(32), " C")
 ```
@@ -42,12 +40,12 @@ Freezing point of water: 0.0 C
 ```
 {: .output}
 
-In Julia, there is an alternative and more compact way to declare the function in a single line
+In Julia, as we learnt in loops and conditionals before, there is an alternative and more compact way to declare the function in a single line:
 ```matlab
 fahr_to_celsius2(temperature) = (temperature-32)*(5/9)
 ```
 {: .source}
-And if we convert 32 Fahrenheit to Celsius using the latter function, we will have the same answer
+If you convert 32 Fahrenheit to Celsius using the *fahr_to_celsius2* function, you will get the same answer:
 ```matlab
 println("Freezing point of water: ", fahr_to_celsius2(32), " C")
 ```
@@ -57,31 +55,31 @@ Freezing point of water: 0.0 C
 ```
 {: .output}
 
-Another way to declare the function would be using the so called "anonymous" function
+You can also create a so called "anonymous" function, without giving a function name, using either of these syntaxes:
 ```matlab
-fahr_to_celsius3 = temperature -> (temperature-32)*(5/9)
+??????temperature -> (temperature-32)*(5/9)
+
+function (temperature)
+    (temperature-32)*(5/9) 
+end
 ```
 {: .source}
-and then if we would like to use the anonymous function, it would be the same way as before
 ```matlab
-println("Freezing point of water: ", fahr_to_celsius3(32), " C")
-```
-{: .source}
-```matlab
-Freezing point of water: 0.0 C
+?????????????
 ```
 {: .output}
+This creates a function taking one argument *temperature* and returning the value of the *(temperature-32)*(5/9)* at that value. Notice that the result is a generic function, but with a compiler-generated name based on consecutive numbering. The primary use for anonymous functions is passing them to functions which take other functions as arguments. A classic example is the **map()** function, which applies a function to each value of an array and returns a new array containing the resulting values. We will talk about the **map()** function later in this section. 
 
 Let's create now a function that converts Celsius to Kelvin. 
 ```matlab
-function celcius_to_kelvin(temperature_c)
+function celsius_to_kelvin(temperature_c)
     temperature_c += 273.15
 end
 ```
 {: .source}
-And let's test it to convert 0 Celsius to Kelvin.
+and let's test the function to convert a temperature from Celsius to Kelvin:
 ```matlab
-celcius_to_kelvin(0)
+celsius_to_kelvin(0)
 ```
 {: .source}
 ```matlab
@@ -89,16 +87,17 @@ celcius_to_kelvin(0)
 ```
 {: .output}
 
+
 # Chain functions
-So now, if we would like to create a function to convert Fahrenheit to Kelvin, we could do it using the two functions that we previously created
+So now, if you would like to create a function to convert Fahrenheit to Kelvin, you can do it using the two functions you previously created, namely *fahr_to_celsius* and *celsius_to_kelvin*:
 ```matlab
 function fahr_to_kelvin(temperature_f)
     temperature_c = fahr_to_celsius(temperature_f)
-    temperature_k = celcius_to_kelvin(temperature_c)
+    temperature_k = celsius_to_kelvin(temperature_c)
 end
 ```
 {: .source}
-Let's test it for 212 Fahrenheit
+Now, if you test the function for a temperature of 212 Fahrenheit, you will get a temperature of 373.15 Kelvin. Note that the ouput value will correspond to the *temperature_k* variable within the function as it is the last calculated variable within the function. Of course, you can always return more outputs from your function, which we will learn how to do it in the next subsection. 
 ```matlab
 fahr_to_kelvin(212)
 ```
@@ -108,18 +107,20 @@ fahr_to_kelvin(212)
 ```
 {: .output}
 
-However, there is another way to do that. We could have chained the two function in order to get the same result without creating another function
+It is good to know that there is an alternative way to do the previous convertion, i.e. you could have chained the two functions in order to get the same result without creating another function:
 ```matlab
-celcius_to_kelvin(fahr_to_celsius(212))
+celsius_to_kelvin(fahr_to_celsius(212))
 ```
 {: .source}
 ```matlab
 373.15
 ```
 {: .output}
+In this case, first we convert the temperature of 212 Fahrenheit to Celsius, and then we pass this new value (in Celsius) as an input in the *celsius_to_kelvin* function, with the final result being in Kelvin. 
+
 
 # Return values
-By default, the function will return the value of the last variable that was defined within the function. For example, the fahr_to_kelvin function will return the value of the temperature_k variable, which is the last command within the function. If we would like to return more than one values, we need to add a command called return before we end the syntax of the function. 
+By default, the function will return the value of the last variable that was defined within the function. For example, the *fahr_to_kelvin* function will return the value of the *temperature_k* variable, which is the last command within the function. If we would like to return more than one values, we need to add a command called **return** before the end of the function. For example:
 ```matlab
 function fahr_to_kelvin(temperature_f)
     temperature_c = fahr_to_celsius(temperature_f)
@@ -135,7 +136,7 @@ a, b = fahr_to_kelvin(10)
 ```
 {: .output}
 
-Another way to do the multiple return values in Julia is
+In Julia, another way to return multiple values without using the **return** command is:
 ```matlab
 function new_function(a,b)
     a+b, a-b
@@ -149,8 +150,10 @@ x, y = new_function(1,3)
 ```
 {: .source}
 
+
 # Default values
-Although most of the functions have many arguments, you usually call them using only a few of them. This means that the other arguments of the function have default values. To define arguments with default values in the function, you have to use the assign (=) symbol when you define them.
+
+Although most of the functions have many arguments, you usually call them using only a few. This means that the other arguments of the function have *default* values. To define arguments with default values in the function, you have to use the assign (=) symbol when you define them:
 ```matlab
 function myprint(a,b=1,c=10)
     println("a:",a," b:",b," c:",c)
@@ -159,13 +162,13 @@ end
 myprint(1)
 ```
 {: .source}
-In this example, the arguments b and c of the function have a default value of 1 and 10, respectively. This way, when we call the function without the b and c arguments, the function will still run and the arguments b and c will take their default values.
+In this example, the arguments *b* and *c* have a default value of 1 and 10, respectively. This way, when we call the function without defining the *b* and *c* arguments, the function will run and the arguments b and c will take their default values.
 ```matlab
 a:1 b:1 c:10
 ```
 {: .output}
 
-If I would like to overwrite the default values then
+If I would like to overwrite the default values then:
 ```matlab
 myprint(1,5)
 ```
@@ -175,7 +178,7 @@ a:1 b:5 c:10
 ```
 {: .output}
 
-?????????????????Be careful! The order you define the arguments when you call the function is important. In the example of myprint(1,5), 1 will be assigned to the argument a, 5 will replace the default value of argument b, and since we haven't defined a value for the argument c, it will have its default value, i.e. 10. However, if, when you call the function, you define the name of the argument, then the order is not important. For example, the order is important in this case, if we would like to define a=1 and b=5
+?????????????????Be careful! The order you define the arguments when you call the function is important. In the example of *myprint(1,5)*, 1 will be assigned to the argument *a*, 5 will replace the default value of argument *b*, and since we haven't defined a value for the argument *c*, it will have its default value, i.e. 10. However, if, when you call the function, you define the name of the argument, then the order is not important. For example, the order is important in this case, if we would like to define a=1 and b=5
 ```matlab
 myprint(1,5)
 ```
@@ -188,9 +191,8 @@ myprint(b=5,a=1)
 
 
 # Multiple dispatch
-Multiple dispatch makes software generic and fast!
 
-Let's start by exploring an example. We can declare functions in Julia without giving Julia any information about the types of the input arguments that function will receive:
+Multiple dispatch makes software generic and fast! Let's start by exploring an example. We can declare functions in Julia without giving Julia any information about the types of the input arguments that function will receive:
 ```matlab
 f(x) = (2*x)^3 
 ```
@@ -201,7 +203,7 @@ f(10)
 ```
 {: .source}
 ```matlab
-
+??????????????????
 ```
 {: .output}
 or 
@@ -210,21 +212,18 @@ f([1, 2, 3])
 ```
 {: .source}
 ```matlab
-
+??????????????????
 ```
 {: .output}
 
-Specifying the types of our input arguments
-However, we also have the option to tell Julia explicitly what types our input arguments are allowed to have.
-For example, let's write a function foo that only takes strings as inputs.
+However, we also have the option to tell Julia explicitly what types our input arguments are allowed to have. For example, let's write a function called *my_func* that only takes strings as inputs.
 ```matlab
 my_funct(a::String, b::String) = println("My inputs a and b are both strings!")
 ```
 {: .source}
+You can see here that in order to restrict the type of x and y to Strings, we just follow the input argument name by a double colon (::) and the keyword String, which indicates the accepted type.
 
-We see here that in order to restrict the type of x and y to Strings, we just follow the input argument name by a double colon and the keyword String.
-
-Now we'll see that foo works on Strings 
+Now we'll see if the *my_func* function works on Strings 
 ```matlab
 my_funct("hello", "hi!")
 ```
@@ -243,7 +242,7 @@ my_func(3, 4)
 ```
 {: .output}
 
-Now foo works on integers! But look, foo also still works when x and y are strings!
+Now *my_func* works on integers! But, *my_func* also still works when x and y are strings!
 ```matlab
 my_func("hello", "hi!")
 ```
@@ -252,24 +251,15 @@ my_func("hello", "hi!")
 
 ```
 {: .output}
-
 This is starting to get to the heart of multiple dispatch. When we declared
 
-my_func(a::Int, b::Int) = println("My inputs a and b are both integers!")
+*my_func(a::Int, b::Int) = println("My inputs a and b are both integers!")*
+
 we didn't overwrite or replace
 
-my_func(a::String, b::String)
-Instead, we just added an additional *method* to the *generic function* called my_func.
+*my_func(a::String, b::String)*
 
-A *generic function* is the abstract concept associated with a particular operation.
-
-For example, the generic function + represents the concept of addition.
-
-A *method* is a specific implementation of a generic function for particular argument types.
-
-For example, + has methods that accept floating point numbers, integers, matrices, etc.
-
-We can use the methods to see how many methods there are for foo.
+Instead, we just added an additional *method* to the *generic function* called *my_func*. A *generic function* is the abstract concept associated with a particular operation. For example, the generic function **+** represents the concept of addition. A *method* is a specific implementation of a generic function for particular argument types. For example, **+** has methods that accept floating point numbers, integers, matrices, etc. We can use the **methods** command to see how many methods there are for *my_func*.
 ```matlab
 methods(my_func)
 ```
@@ -279,11 +269,11 @@ methods(my_func)
 ```
 {: .output}
 
-So, we now can call foo on integers or strings. When you call foo on a particular set of arguments, Julia will infer the types of the inputs and dispatch the appropriate method. This is multiple dispatch.
+So, we now can call *my_func* on integers or strings. When you call *my_func* on a particular set of arguments, Julia will infer the types of the inputs and dispatch the appropriate method. This is the concept behind the multiple dispatch.
 
 Multiple dispatch makes our code generic and fast. Our code can be generic and flexible because we can write code in terms of abstract operations such as addition and multiplication, rather than in terms of specific implementations. At the same time, our code runs quickly because Julia is able to call efficient methods for the relevant types.
 
-To see which method is being dispatched when we call a generic function, we can use the @which macro:
+To see which method is being dispatched when you call a generic function, you can use the **@which** macro:
 ```matlab
 @which my_func(3, 4)
 ```
