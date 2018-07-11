@@ -300,8 +300,9 @@ my_func(a, b) = println("I accept inputs of any type!")
 - Check what method being dispatched when you execute .....
 - add the argument to be also string
 
+
 # Mutating vs non-mutating functions
-By convention, functions followed by the exclamation mark symbol (!) after their contents and functions lacking ! do not. 
+By convention, functions followed by the exclamation mark symbol (!) can mutate its inputs. Any function can mutate its inputs, but so that it is clear that it is doing so, we suffix it with a **!**
 
 For example let's use the sort function to sort a list of values
 ```matlab
@@ -329,7 +330,7 @@ v
 ```
 {: .output}
 
-Now if we run the sort function but with the ! then
+Now if we run the sort function but with the **!**, the list will retain the sorted format because we used the ! after the **sort** function:
 ```matlab
 sort!(v)
 ```
@@ -341,7 +342,7 @@ sort!(v)
  5
 ```
 {: .output}
-and the list will retain the sorted format because we used the ! after sort
+
 ```matlab
 v
 ```
@@ -353,6 +354,7 @@ v
  5
 ```
 {: .output}
+
 
 # Higher order functions
 
